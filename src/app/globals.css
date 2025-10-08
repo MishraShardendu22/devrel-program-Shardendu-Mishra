@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* Font utility classes */
+.font-lora {
+  font-family: var(--font-lora), serif;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* Additional button styles */
+.btn {
+  display: inline-block;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  height: 5.4rem;
+  line-height: 5.4rem;
+  padding: 0 3rem;
+  margin: 0 .3rem 1.2rem 0;
+  background: #6f0a0d;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--stroke {
+  background: transparent !important;
+  border: 3px solid #FFFFFF;
+  line-height: 4.8rem;
+}
+
+.btn--stroke:hover {
+  border: 3px solid #ff904d;
+  color: #ff904d;
+}
+
+/* Ensure smooth scrolling for anchor links */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}

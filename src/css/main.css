@@ -2872,12 +2872,12 @@ html.no-csstransitions .home-content__main {
 
 .clients-testimonials .testimonials .slick-prev {
     left: -130px;
-    background-image: url("../images/left-arrow.png");
+    background-image: url("/left-arrow.png");
 }
 
 .clients-testimonials .testimonials .slick-next {
     right: -130px;
-    background-image: url("../images/right-arrow.png");
+    background-image: url("/right-arrow.png");
 }
 
 .clients-testimonials .testimonials .slick-dots {
@@ -2958,7 +2958,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-contact {
     background-color: #6f0a0d;
-    background-image: url("../images/contact-bg.jpg");
+    background-image: url("/contact-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 15rem;
@@ -3403,7 +3403,7 @@ html.no-csstransitions .home-content__main {
   margin-top: -10px;
   padding-top: 80px;
   /* background-image:url('https://raw.githubusercontent.com/keploy/website/f37829d39b80993698f1fb019d369440c96f72d6/img/banner/dot-background.svg') ; */
-  background-image:url('../images/dot-background.png') ;
+  background-image:url('/dot-background.png') ;
   image-resolution: 300dpi;
 }
 .impress_area .impress_inner {
@@ -3524,7 +3524,7 @@ html.no-csstransitions .home-content__main {
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-  background-image: url('../images/dot-background.png');
+  background-image: url('/dot-background.png');
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 120px;

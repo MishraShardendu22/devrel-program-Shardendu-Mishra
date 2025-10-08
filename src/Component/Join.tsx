@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 
@@ -14,25 +16,57 @@ const Join = () => {
 
       <div className="row contact-content">
         <div className="contact-primary">
-          <h3 className="h6">GET INVOLVED IN THE COMMUNITY TODAY!</h3>
+          <h3 className="h6">Get Involved In The Community Today!</h3>
           <Image 
             src="/slack.png" 
-            alt="Slack Community" 
+            alt="Slack Image" 
             width={600} 
             height={400}
             style={{ maxWidth: '100%', height: 'auto' }}
           />
-          <button className="join-btn">
-            <Link href="https://keploy.slack.com/" target="_blank" rel="noopener noreferrer">
-              JOIN SLACK
-            </Link>
-          </button>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>
+            <a 
+              href="https://keploy.slack.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '16px 32px',
+                backgroundColor: '#ef4444',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '12px',
+                fontSize: '18px',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 15px rgba(239, 68, 68, 0.3)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#dc2626';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(239, 68, 68, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#ef4444';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(239, 68, 68, 0.3)';
+              }}
+            >
+              Join Slack
+            </a>
+          </div>
         </div>
 
         <div className="contact-secondary">
           <div className="contact-info">
             <div className="cinfo">
-              <h2>
+              <h2 style={{ color: 'rgb(47 43 40)' }}>
                 Meet students, mentors and educators around the world excited about APIs and technology!!
               </h2>
             </div>

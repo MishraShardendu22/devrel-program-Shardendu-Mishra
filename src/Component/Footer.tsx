@@ -21,32 +21,6 @@ const Footer = () => {
   };
 
   return (
-    <>
-      {/* Newsletter Section */}
-      <section className="s-newsletter">
-        <div className="row newsletter-content">
-          <div className="column large-12">
-            <div className="newsletter-wrap">
-              <h2 className="display-1 display-1--light">Sign-up for the newsletter!</h2>
-              <form onSubmit={handleSubscribe} className="newsletter-form">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter email"
-                  required
-                  className="newsletter-input"
-                />
-                <button type="submit" className="newsletter-btn">
-                  <i className="fa fa-arrow-right"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer Section */}
       <footer className="s-footer">
         <div className="row footer-content">
           <div className="footer-main">
@@ -57,23 +31,78 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="footer-col footer-newsletter">
-              <h3 className="footer-title">Newsletter</h3>
-              <p className="footer-desc">Stay updated with our latest trends</p>
-              <form onSubmit={handleFooterSubscribe} className="footer-subscribe-form">
+            <div className="newsletter-wrap">
+              <h2 className="display-1 display-1--light">Sign-up for the newsletter!</h2>
+              <form onSubmit={handleSubscribe} style={{ display: 'flex', alignItems: 'center', gap: '12px', maxWidth: '400px', margin: '0 auto' }}>
                 <input
                   type="email"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter email"
                   required
-                  className="footer-input"
+                  style={{
+                    flex: 1,
+                    padding: '14px 18px',
+                    fontSize: '16px',
+                    border: '2px solid #e5e7eb',
+                    borderRadius: '12px',
+                    outline: 'none',
+                    transition: 'all 0.3s ease',
+                    backgroundColor: '#ffffff',
+                    color: '#374151'
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = '#ef4444';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#e5e7eb';
+                    e.target.style.boxShadow = 'none';
+                  }}
                 />
-                <button type="submit" className="footer-subscribe-btn">
-                  <i className="fa fa-arrow-right"></i>
+                <button 
+                  type="submit" 
+                  style={{
+                    padding: '14px 18px',
+                    backgroundColor: '#ef4444',
+                    border: 'none',
+                    borderRadius: '12px',
+                    color: 'white',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    minWidth: '52px',
+                    height: '52px'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#dc2626';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 8px 25px rgba(239, 68, 68, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#ef4444';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <svg 
+                    width="18" 
+                    height="18" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
                 </button>
               </form>
             </div>
+            
 
             <div className="footer-col footer-social">
               <h3 className="footer-title">Find us on</h3>
@@ -109,7 +138,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+
   );
 };
 

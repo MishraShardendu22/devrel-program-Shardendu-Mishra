@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import "../css/base.css";
 import "../css/vendor.css";
 import "../css/main.css";
+import "../css/fonts.css";
 import "../css/font-awesome/css/font-awesome.min.css";
+import "../css/micons/micons.css";
 import "./custom.css";
 import Navbar from "@/Component/Navbar";
 
@@ -88,8 +91,25 @@ const montserrat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Keploy Developer Relation",
-  description: "This is the official website for Keploy Developer Relation.",
+  title: "Keploy Developer Relations Program",
+  description: "Keploy Developer Relations Program",
+  authors: [{ name: "Keploy.io" }],
+  keywords: ["Keploy", "Developer Relations", "DevRel", "API Testing", "Open Source"],
+  alternates: {
+    canonical: "https://devrel.keploy.io/",
+  },
+  openGraph: {
+    title: "Keploy Developer Relations Program",
+    description: "Get into the world of DevRels and experience of being one for a month",
+    url: "https://devrel.keploy.io/",
+    siteName: "Keploy Developer Relations Program",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Keploy Developer Relations Program",
+    description: "Get into the world of DevRels and experience of being one for a month",
+  },
 };
 
 export default function RootLayout({
@@ -99,6 +119,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+        />
+        <link rel="icon" href="/keploy-logo.png" type="image/png" />
+      </head>
       <body
         className={`${lora.variable} ${montserrat.variable} antialiased`}
       >

@@ -1,19 +1,17 @@
 /* Custom styles to ensure proper rendering */
 
-/* Custom Scrollbar Styling */
+/* Custom Scrollbar Styling - Matching old HTML */
 ::-webkit-scrollbar {
   width: 12px;
-  height: 12px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
-  border-left: 1px solid #e0e0e0;
+  background-color: #F5DEB3; /* Wheat color from old design */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6f0a0d;
-  border-radius: 0;
+  background-color: #6f0a0d;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -23,7 +21,7 @@
 /* Firefox scrollbar styling */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #6f0a0d #f5f5f5;
+  scrollbar-color: #6f0a0d #F5DEB3;
 }
 
 /* Ensure body and html take full height */
@@ -183,19 +181,26 @@ html {
 
 /* Testimonial Section Styling */
 .s-works {
-  background-color: #6f0a0d !important;
+  background-color: #FFFFFF !important;
   background-image: none !important;
-  padding-top: 12rem;
-  padding-bottom: 8rem;
+  padding: 0 0 15rem 0;
+  min-height: 800px;
+  position: relative;
 }
 
 .s-works .intro-wrap {
-  padding-bottom: 4rem;
+  padding: 15rem 0 25.2rem;
+  background: #6f0a0d;
   margin-bottom: 0;
 }
 
 .s-works .section-header {
   margin-bottom: 4rem;
+}
+
+.works-content {
+  max-width: 1160px;
+  margin-top: -23.4rem;
 }
 
 .outerdiv {
@@ -846,5 +851,72 @@ html {
   
   .footer-desc {
     font-size: 1.3rem;
+  }
+}
+
+/* Additional centering for newsletter and footer sections */
+.impress_area .impress_inner {
+  text-align: center;
+}
+
+.impress_area .input-group {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.footer_area .row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer_area .footer_inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer_area .col-lg-5,
+.footer_area .col-sm-6,
+.footer_area .col-lg-2 {
+  text-align: left;
+}
+
+.news_widget .input-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social_widget .list {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer_area .footer_inner {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer_area .col-lg-5,
+  .footer_area .col-sm-6,
+  .footer_area .col-lg-2 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .news_widget .input-group {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .social_widget .list {
+    justify-content: center;
   }
 }

@@ -10,6 +10,7 @@ import "../css/font-awesome/css/font-awesome.min.css";
 import "../css/micons/micons.css";
 import "./custom.css";
 import Navbar from "@/Component/Navbar";
+import StructuredData from "@/Component/StructuredData";
 
 const lora = localFont({
   src: [
@@ -91,25 +92,78 @@ const montserrat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Keploy Developer Relations Program",
-  description: "Keploy Developer Relations Program",
-  authors: [{ name: "Keploy.io" }],
-  keywords: ["Keploy", "Developer Relations", "DevRel", "API Testing", "Open Source"],
+  metadataBase: new URL('https://devrel.keploy.io'),
+  title: {
+    default: "Keploy Developer Relations Program | Join DevRel Community",
+    template: "%s | Keploy DevRel Program"
+  },
+  description: "Get into the world of DevRels and experience of being one for a month. Join Keploy's Developer Relations Program to learn API testing, create content, and grow your developer community skills.",
+  authors: [{ name: "Keploy.io", url: "https://keploy.io" }],
+  creator: "Keploy Inc.",
+  publisher: "Keploy Inc.",
+  keywords: [
+    "Keploy", 
+    "Developer Relations", 
+    "DevRel", 
+    "API Testing", 
+    "Open Source",
+    "Developer Community",
+    "Technical Content",
+    "Developer Advocacy",
+    "Testing Tools",
+    "Software Testing",
+    "Community Building",
+    "Developer Program",
+    "Tech Education",
+    "API Mocking",
+    "Test Automation"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   alternates: {
     canonical: "https://devrel.keploy.io/",
   },
   openGraph: {
-    title: "Keploy Developer Relations Program",
-    description: "Get into the world of DevRels and experience of being one for a month",
+    title: "Keploy Developer Relations Program | Join DevRel Community",
+    description: "Get into the world of DevRels and experience of being one for a month. Learn API testing, create content, and grow your community skills.",
     url: "https://devrel.keploy.io/",
     siteName: "Keploy Developer Relations Program",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/cohort3.png",
+        width: 1200,
+        height: 630,
+        alt: "Keploy Developer Relations Program"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Keploy Developer Relations Program",
-    description: "Get into the world of DevRels and experience of being one for a month",
+    site: "@Keployio",
+    creator: "@Keployio",
+    title: "Keploy Developer Relations Program | Join DevRel Community",
+    description: "Get into the world of DevRels and experience of being one for a month. Learn API testing, create content, and grow your community skills.",
+    images: ["/cohort3.png"]
   },
+  icons: {
+    icon: "/keploy-logo.png",
+    apple: "/keploy-logo.png"
+  },
+  manifest: "/site.webmanifest",
+  verification: {
+    google: "your-google-verification-code", // Replace with actual code
+  }
 };
 
 export default function RootLayout({
@@ -129,6 +183,7 @@ export default function RootLayout({
       <body
         className={`${lora.variable} ${montserrat.variable} antialiased`}
       >
+        <StructuredData />
         <Navbar />
         {children}
       </body>

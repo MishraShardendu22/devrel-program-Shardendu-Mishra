@@ -1,0 +1,21 @@
+{
+  "name": "Keploy Developer Relations Program",
+  "short_name": "Keploy DevRel",
+  "description": "Join Keploy's Developer Relations Program and experience the world of DevRel",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#8B0000",
+  "theme_color": "#ef4444",
+  "icons": [
+    {
+      "src": "/keploy-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/keploy-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -20,8 +20,13 @@ const Navbar = () => {
             <Image
               src="/keploy-logo.png"
               alt="Keploy Logo"
-              width={220}
-              height={220}
+              width={300}
+              height={300}
+              style={{
+                width: '150px',
+                height: 'auto',
+                maxWidth: 'none'
+              }}
             />
           </Link>
         </div>

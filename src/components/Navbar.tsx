@@ -54,7 +54,6 @@ const Navbar = () => {
             e.currentTarget.style.boxShadow = '0 4px 15px rgba(239, 68, 68, 0.3)';
           }}
         >
-
           <span className="header-menu-icon"></span>
         </div>
       </header>

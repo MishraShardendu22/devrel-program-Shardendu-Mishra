@@ -4,20 +4,12 @@ import React, { useState } from "react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
-  const [newsletterEmail, setNewsletterEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter subscription
-    console.log("Newsletter subscription:", email);
+    // console.log("Newsletter subscription:", email);
     setEmail("");
-  };
-
-  const handleFooterSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle footer newsletter subscription
-    console.log("Footer subscription:", newsletterEmail);
-    setNewsletterEmail("");
   };
 
   return (
@@ -40,6 +32,7 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email"
                   required
+                  className="newsletter-input"
                   style={{
                     flex: 1,
                     padding: '14px 18px',

@@ -1,92 +1,28 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import Script from "next/script";
+import { Lora, Montserrat } from "next/font/google";
 import "./globals.css";
-import "../css/base.css";
-import "../css/vendor.css";
-import "../css/main.css";
-import "../css/fonts.css";
-import "../css/font-awesome/css/font-awesome.min.css";
-import "../css/micons/micons.css";
+import "../styles/base.css";
+import "../styles/vendor.css";
+import "../styles/main.css";
+import "../styles/dark-mode.css";
+import "../styles/font-awesome/css/font-awesome.min.css";
+import "../styles/micons/micons.css";
 import "./custom.css";
-import Navbar from "@/Component/Navbar";
-import StructuredData from "@/Component/StructuredData";
+import Navbar from "@/components/Navbar";
+import StructuredData from "@/components/StructuredData";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const lora = localFont({
-  src: [
-    {
-      path: "../../fonts/lora/lora-regular-webfont.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/lora/lora-italic-webfont.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../fonts/lora/lora-bold-webfont.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/lora/lora-bolditalic-webfont.woff2",
-      weight: "700",
-      style: "italic",
-    },
-  ],
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   variable: "--font-lora",
   display: "swap",
 });
 
-const montserrat = localFont({
-  src: [
-    {
-      path: "../../fonts/montserrat/montserrat-thin-webfont.woff2",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-extralight-webfont.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-light-webfont.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-regular-webfont.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-medium-webfont.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-semibold-webfont.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-bold-webfont.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-extrabold-webfont.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../../fonts/montserrat/montserrat-black-webfont.woff2",
-      weight: "900",
-      style: "normal",
-    },
-  ],
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-montserrat",
   display: "swap",
 });
@@ -172,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -183,9 +119,16 @@ export default function RootLayout({
       <body
         className={`${lora.variable} ${montserrat.variable} antialiased`}
       >
-        <StructuredData />
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <StructuredData />
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

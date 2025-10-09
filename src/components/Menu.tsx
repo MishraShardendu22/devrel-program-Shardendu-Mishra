@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect } from "react"
+import { useTheme } from "next-themes"
+import { Switch } from "@/components/ui/switch"
 
 interface MenuProps {
   isOpen: boolean
@@ -8,6 +10,8 @@ interface MenuProps {
 }
 
 const Menu = ({ isOpen, onClose }: MenuProps) => {
+  const { theme, setTheme } = useTheme()
+  
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('menu-is-open')
@@ -169,6 +173,41 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             >Join</a>
           </li>
         </ul>
+
+        <div style={{
+          borderTop: '1px solid rgba(139, 0, 0, 0.2)',
+          paddingTop: '20px',
+          marginBottom: '30px'
+        }}>
+          <h3 style={{
+            color: '#8B0000',
+            fontSize: '14px',
+            fontWeight: '600',
+            marginBottom: '15px',
+            letterSpacing: '2px',
+            textTransform: 'uppercase'
+          }}>THEME</h3>
+          
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-start'
+          }}>
+            <Switch
+              checked={theme === 'dark'}
+              onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+              className="data-[state=checked]:bg-orange-500"
+            />
+            <span style={{
+              marginLeft: '12px',
+              color: '#8B0000',
+              fontSize: '14px',
+              fontWeight: '500'
+            }}>
+              Dark Mode
+            </span>
+          </div>
+        </div>
 
         <ul 
           className="header-nav__social"

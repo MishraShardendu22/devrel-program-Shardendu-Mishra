@@ -564,14 +564,7 @@ button,
   color: #a1a1aa !important;
 }
 
-/* Menu Toggle Button in Dark Mode */
-.dark .header-menu-toggle {
-  background-color: #f97316 !important;
-}
-
-.dark .header-menu-toggle:hover {
-  background-color: #ea580c !important;
-}
+/* Menu Toggle Button - removed dark mode specific styles to keep same as light mode */
 
 .dark .header-menu-icon,
 .dark .header-menu-icon::before,

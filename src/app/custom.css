@@ -497,13 +497,13 @@ html {
 }
 
 .dark .contact-primary {
-  background-color: #18181b;
-  border-color: #27272a;
+  background-color: transparent !important;
+  border-color: #3f3f46;
 }
 
 .dark .contact-primary:hover {
-  border-color: #f97316;
-  box-shadow: 0 8px 32px rgba(249, 115, 22, 0.1);
+  border-color: #52525b;
+  box-shadow: 0 8px 32px rgba(82, 82, 91, 0.2);
 }
 
 .contact-primary h3 {
@@ -555,6 +555,17 @@ html {
   text-decoration: none;
 }
 
+/* Join Slack button dark mode styling */
+.dark .join-slack-button {
+  background-color: #3f3f46 !important;
+  box-shadow: 0 4px 15px rgba(63, 63, 70, 0.3) !important;
+}
+
+.dark .join-slack-button:hover {
+  background-color: #52525b !important;
+  box-shadow: 0 8px 25px rgba(82, 82, 91, 0.4) !important;
+}
+
 .contact-secondary {
   background-color: #E35134;
   padding: 4rem 5rem !important;
@@ -567,13 +578,13 @@ html {
 }
 
 .dark .contact-secondary {
-  background-color: #27272a !important;
+  background-color: #18181b !important;
   border-color: #3f3f46;
 }
 
 .dark .contact-secondary:hover {
-  border-color: #f97316;
-  box-shadow: 0 8px 32px rgba(249, 115, 22, 0.1);
+  border-color: #52525b;
+  box-shadow: 0 8px 32px rgba(82, 82, 91, 0.2);
 }
 
 .contact-secondary::before {
@@ -581,7 +592,7 @@ html {
 }
 
 .dark .contact-secondary::before {
-  background-color: #27272a !important;
+  background-color: #18181b !important;
 }
 
 .contact-secondary .contact-info {

@@ -29,6 +29,7 @@ const Join = () => {
               href="https://keploy.slack.com/" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="join-slack-button"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -66,7 +67,7 @@ const Join = () => {
         <div className="contact-secondary">
           <div className="contact-info">
             <div className="cinfo">
-              <h2 style={{ color: 'rgb(47 43 40)' }}>
+              <h2>
                 Meet students, mentors and educators around the world excited about APIs and technology!!
               </h2>
             </div>

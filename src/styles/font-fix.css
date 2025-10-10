@@ -175,9 +175,16 @@ footer .display-1--light,
 .contact-secondary h2,
 .contact-info h2,
 .cinfo h2 {
-    font-size: 2.4rem !important;
-    font-weight: 500 !important;
-    line-height: 1.5 !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+}
+
+.dark .cinfo h2,
+.dark .contact-info h2,
+.dark .contact-secondary h2 {
+    color: #fafafa !important;
 }
 
 /* Newsletter signup heading */

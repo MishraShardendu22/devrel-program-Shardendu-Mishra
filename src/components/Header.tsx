@@ -8,11 +8,12 @@ const Header = () => {
 
       <div className="home-content">
         <div className="row home-content__main">
-          <h3>Get into the world of DevRels and experience of being one for a month</h3>
           <h1>
             Keploy Developer <br />
             Relations Program
           </h1>
+          <h3>Get into the world of DevRels and<br />
+          experience of being one for a month</h3>
 
           <div className="home-content__buttons">
             <Link
@@ -27,12 +28,6 @@ const Header = () => {
             >
               KNOW MORE
             </Link>
-          </div>
-
-          <div className="home-content__scroll">
-            <a href="#about" className="scroll-link">
-              Scroll Down
-            </a>
           </div>
         </div>
       </div>
@@ -69,6 +64,12 @@ const Header = () => {
           </a>
         </li>
       </ul>
+
+      <div className="home-content__scroll">
+        <a href="#about" className="scroll-link">
+          Scroll Down
+        </a>
+      </div>
     </section>
   )
 }

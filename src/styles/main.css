@@ -1847,8 +1847,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-content__scroll {
     position: absolute;
-    right: 9.5rem;
-    bottom: 8.4rem;
+    right: 4rem;
+    bottom: 2rem;
 }
 
 .home-content__scroll a {
@@ -2144,7 +2144,8 @@ html.no-csstransitions .home-content__main {
         display: none;
     }
     .home-content__scroll {
-        bottom: 5.4rem;
+        bottom: 2rem;
+        right: 2rem;
     }
     .home-content__line {
         height: 7.2rem;

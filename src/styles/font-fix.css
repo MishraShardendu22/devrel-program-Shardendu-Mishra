@@ -1,0 +1,221 @@
+/* ===================================================================
+ * Font Fix - Override all montserrat-* and lora-* font-family 
+ * declarations to use the actual fonts with proper weights
+ * This file MUST be loaded last to override all other font declarations
+ * ------------------------------------------------------------------- */
+
+/* Critical: Override ALL elements to use the proper Montserrat font */
+*:not(i):not([class*="fa-"]):not([class*="icon"]) {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+/* Header Section */
+.home-content h1 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 7rem !important;
+}
+
+.home-content h3 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 500 !important;
+    font-size: 1.8rem !important;
+}
+
+.home-content__scroll a {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 600 !important;
+}
+
+/* Display headings - used in testimonials, join, etc */
+.display-1,
+.display-2 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 5.8rem !important;
+}
+
+.display-1--light,
+.display-2--light {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 5.8rem !important;
+}
+
+/* Subhead styles */
+.subhead {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem !important;
+}
+
+/* Section titles */
+.s-services h2,
+.s-works h2,
+.s-clients h2,
+.s-contact h2,
+.section-header h1,
+.section-header h2 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 4.5rem !important;
+}
+
+/* Why Us section */
+.s-services h3,
+.service-list h3 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 600 !important;
+    font-size: 2.2rem !important;
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+}
+
+/* Social links */
+.home-social {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 400 !important;
+}
+
+.home-social a {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+/* Footer */
+.footer h4,
+.footer h3 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 600 !important;
+    font-size: 1.6rem !important;
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+h1 {
+    font-size: 4.5rem !important;
+}
+
+h2 {
+    font-size: 3.5rem !important;
+}
+
+h3 {
+    font-size: 2.5rem !important;
+}
+
+/* Body and paragraphs */
+body {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+p {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 400 !important;
+    font-size: 1.8rem !important;
+    line-height: 1.8 !important;
+}
+
+/* About/Hero description - lighter, more readable font */
+.about-desc p,
+.s-about .about-desc p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 1.9rem !important;
+    line-height: 1.9 !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* Stats section - bold numbers and labels */
+.stats__count {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 900 !important;
+    font-size: 8.4rem !important;
+    line-height: 1 !important;
+}
+
+.stats h5,
+.about-stats h5 {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1.6rem !important;
+}
+
+/* Newsletter and footer text - keep normal size */
+.footer p,
+.footer-bottom p,
+.footer-main p,
+.s-contact p,
+.s-contact__line,
+.contact-info p,
+footer p {
+    font-size: 1.5rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Footer newsletter heading - keep it normal size */
+.footer .display-1,
+.footer .display-1--light,
+footer .display-1,
+footer .display-1--light,
+.s-footer .display-1,
+.s-footer .display-1--light {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+}
+
+/* Join/Contact section secondary text */
+.contact-secondary h2,
+.contact-info h2,
+.cinfo h2 {
+    font-size: 2.4rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+/* Newsletter signup heading */
+.s-contact h3,
+footer h3,
+.contact-primary h3 {
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+}
+
+/* Copyright text */
+.footer-bottom,
+.copyright,
+[class*="copyright"] {
+    font-size: 1.4rem !important;
+}
+
+/* Newsletter signup heading */
+.s-contact h3,
+footer h3 {
+    font-size: 2rem !important;
+}
+
+/* All text elements */
+span, a, div, section, article, header, footer, nav, aside,
+button, input, textarea, select, label, legend, caption {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+/* Testimonials */
+.testimonials-wrap p,
+.testimonials__author {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+}
+
+/* Contact section */
+.s-contact__line {
+    font-family: var(--font-montserrat, "Montserrat", sans-serif) !important;
+    font-weight: 400 !important;
+}
+

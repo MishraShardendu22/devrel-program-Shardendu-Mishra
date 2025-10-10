@@ -44,6 +44,7 @@ html, body, #__next {
 
 .home-content h1 {
   color: #FFFFFF !important;
+  font-family: "montserrat-bold", sans-serif !important;
 }
 
 /* Display headings styling */

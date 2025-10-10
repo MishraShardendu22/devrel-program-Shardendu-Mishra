@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Montserrat } from "next/font/google";
 import "./globals.css";
+import "../styles/fonts.css";
 import "../styles/base.css";
 import "../styles/vendor.css";
 import "../styles/main.css";
@@ -8,6 +9,7 @@ import "../styles/dark-mode.css";
 import "../styles/font-awesome/css/font-awesome.min.css";
 import "../styles/micons/micons.css";
 import "./custom.css";
+import "../styles/font-fix.css";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/ThemeProvider";

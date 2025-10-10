@@ -202,3 +202,210 @@ a[href^="#"] {
     @apply bg-background text-foreground;
   }
 }
+
+/* Fade-Up Animation Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-Up Animation - Viewport triggered */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-up.visible {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Staggered delays for fade-up animations */
+.fade-up-delay-100.visible {
+  animation: fadeUp 0.6s ease-out 0.1s forwards;
+}
+
+.fade-up-delay-200.visible {
+  animation: fadeUp 0.6s ease-out 0.2s forwards;
+}
+
+.fade-up-delay-300.visible {
+  animation: fadeUp 0.6s ease-out 0.3s forwards;
+}
+
+.fade-up-delay-400.visible {
+  animation: fadeUp 0.6s ease-out 0.4s forwards;
+}
+
+.fade-up-delay-500.visible {
+  animation: fadeUp 0.6s ease-out 0.5s forwards;
+}
+
+.fade-up-delay-600.visible {
+  animation: fadeUp 0.6s ease-out 0.6s forwards;
+}
+
+/* Appear Animation Keyframes - For immediate load animations */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appear Animation Utility Classes - Immediate load animations */
+.animate-appear {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Staggered Animation Delays */
+.animate-appear-delay-1 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+  opacity: 0;
+}
+
+.animate-appear-delay-2 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
+  opacity: 0;
+}
+
+.animate-appear-delay-3 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
+  opacity: 0;
+}
+
+.animate-appear-delay-4 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards;
+  opacity: 0;
+}
+
+.animate-appear-delay-5 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-appear-delay-6 {
+  animation: appear 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards;
+  opacity: 0;
+}
+
+/* Scroll-triggered appear animations - visible by default */
+.animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+}
+
+.animate-on-scroll-delay-1.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s;
+}
+
+.animate-on-scroll-delay-2.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s;
+}
+
+.animate-on-scroll-delay-3.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s;
+}
+
+.animate-on-scroll-delay-4.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-5 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.animate-on-scroll-delay-5.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-on-scroll-delay-6 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s, 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s;
+}
+
+.animate-on-scroll-delay-6.before-visible {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* NProgress Yellow Loading Bar Styles */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #fbbf24 !important;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #fbbf24, 0 0 5px #fbbf24;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
+}

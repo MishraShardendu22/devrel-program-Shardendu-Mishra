@@ -2,20 +2,57 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const Join = () => {
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-fade-id')
+            if (id) {
+              setVisibleElements(prev => new Set([...prev, id]))
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    )
+
+    const elements = document.querySelectorAll('.fade-up')
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
+
   return (
     <section id="join" className="s-contact">
       <div className="overlay"></div>
       
       <div className="row section-header">
         <div className="col-full">
-          <h1 className="display-2 display-2--light">Join Our API Community Today!</h1>
+          <h1 
+            className={`display-2 display-2--light fade-up ${visibleElements.has('join-title') ? 'visible' : ''}`}
+            data-fade-id="join-title"
+          >
+            Join Our API Community Today!
+          </h1>
         </div>
       </div>
 
       <div className="row contact-content">
-        <div className="contact-primary">
+        <div 
+          className={`contact-primary fade-up fade-up-delay-100 ${visibleElements.has('join-primary') ? 'visible' : ''}`}
+          data-fade-id="join-primary"
+        >
           <h3 className="h6">Get Involved In The Community Today!</h3>
           <Image 
             src="/slack.png" 
@@ -64,7 +101,10 @@ const Join = () => {
           </div>
         </div>
 
-        <div className="contact-secondary">
+        <div 
+          className={`contact-secondary fade-up fade-up-delay-200 ${visibleElements.has('join-secondary') ? 'visible' : ''}`}
+          data-fade-id="join-secondary"
+        >
           <div className="contact-info">
             <div className="cinfo">
               <h2>

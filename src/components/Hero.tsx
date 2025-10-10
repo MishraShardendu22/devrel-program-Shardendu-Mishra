@@ -10,11 +10,12 @@ const Hero = () => {
     onboarded: 0
   })
 
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
   const sectionRef = useRef<HTMLDivElement>(null)
   const [hasAnimated, setHasAnimated] = useState(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const counterObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
@@ -28,13 +29,35 @@ const Hero = () => {
 
     const currentSection = sectionRef.current
     if (currentSection) {
-      observer.observe(currentSection)
+      counterObserver.observe(currentSection)
     }
+
+    // Fade-up animation observer
+    const fadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-fade-id')
+            if (id) {
+              setVisibleElements(prev => new Set([...prev, id]))
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    )
+
+    const elements = document.querySelectorAll('.fade-up')
+    elements.forEach((el) => fadeObserver.observe(el))
 
     return () => {
       if (currentSection) {
-        observer.unobserve(currentSection)
+        counterObserver.unobserve(currentSection)
       }
+      elements.forEach((el) => fadeObserver.unobserve(el))
     }
   }, [hasAnimated])
 
@@ -72,14 +95,27 @@ const Hero = () => {
     <section id="about" className="s-about target-section" ref={sectionRef}>
       <div className="row section-header has-bottom-sep">
         <div className="col-full">
-          <h3>Hello There</h3>
-          <h1 className="display-1">We Are Keploy</h1>
+          <h3 
+            className={`fade-up ${visibleElements.has('hero-subtitle') ? 'visible' : ''}`}
+            data-fade-id="hero-subtitle"
+          >
+            Hello There
+          </h3>
+          <h1 
+            className={`display-1 fade-up fade-up-delay-100 ${visibleElements.has('hero-title') ? 'visible' : ''}`}
+            data-fade-id="hero-title"
+          >
+            We Are Keploy
+          </h1>
         </div>
       </div>
 
       <div className="row about-desc">
         <div className="col-full">
-          <p>
+          <p 
+            className={`fade-up fade-up-delay-200 ${visibleElements.has('hero-desc') ? 'visible' : ''}`}
+            data-fade-id="hero-desc"
+          >
             Keploy is a functional testing toolkit for developers. As an open source organisation, we
             believe everything should be community-driven. We want folks to come together with
             us and experience what it is like to be that DevRel and learn and grow with the
@@ -89,19 +125,31 @@ const Hero = () => {
       </div>
 
       <div className="row about-stats stats block-1-4 block-m-1-2 block-mob-full">
-        <div className="col-block stats__col">
+        <div 
+          className={`col-block stats__col fade-up fade-up-delay-300 ${visibleElements.has('hero-stat-1') ? 'visible' : ''}`}
+          data-fade-id="hero-stat-1"
+        >
           <div className="stats__count">{counters.cohorts}</div>
           <h5>Cohorts</h5>
         </div>
-        <div className="col-block stats__col">
+        <div 
+          className={`col-block stats__col fade-up fade-up-delay-400 ${visibleElements.has('hero-stat-2') ? 'visible' : ''}`}
+          data-fade-id="hero-stat-2"
+        >
           <div className="stats__count">{counters.applications}</div>
           <h5>Applications</h5>
         </div>
-        <div className="col-block stats__col">
+        <div 
+          className={`col-block stats__col fade-up fade-up-delay-500 ${visibleElements.has('hero-stat-3') ? 'visible' : ''}`}
+          data-fade-id="hero-stat-3"
+        >
           <div className="stats__count">{counters.devrels}</div>
           <h5>DevRels</h5>
         </div>
-        <div className="col-block stats__col">
+        <div 
+          className={`col-block stats__col fade-up fade-up-delay-600 ${visibleElements.has('hero-stat-4') ? 'visible' : ''}`}
+          data-fade-id="hero-stat-4"
+        >
           <div className="stats__count">{counters.onboarded}</div>
           <h5>Onboarded</h5>
         </div>

@@ -13,6 +13,7 @@ import "../styles/font-fix.css";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import NProgressProvider from "@/components/NProgressProvider";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -127,6 +128,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <NProgressProvider />
           <StructuredData />
           <Navbar />
           {children}

@@ -1,12 +1,51 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const WhyUs = () => {
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-fade-id')
+            if (id) {
+              setVisibleElements(prev => new Set([...prev, id]))
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    )
+
+    const elements = document.querySelectorAll('.fade-up')
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
+
   return (
     <section id="services" className="s-services">
       <div className="row section-header has-bottom-sep">
         <div className="col-full">
-          <h3 className="subhead">DEVREL PROGRAM</h3>
-          <h1 className="display-2">
+          <h3 
+            className={`subhead fade-up ${visibleElements.has('whyus-subtitle') ? 'visible' : ''}`}
+            data-fade-id="whyus-subtitle"
+          >
+            DEVREL PROGRAM
+          </h3>
+          <h1 
+            className={`display-2 fade-up fade-up-delay-100 ${visibleElements.has('whyus-title') ? 'visible' : ''}`}
+            data-fade-id="whyus-title"
+          >
             Wanna know what it is like to be a <br />
             DevRel?
           </h1>
@@ -15,7 +54,10 @@ const WhyUs = () => {
 
       <div className="row services-list block-1-3 block-tab-full">
         {/* Learn Section */}
-        <div className="col-block service-item">
+        <div 
+          className={`col-block service-item fade-up fade-up-delay-200 ${visibleElements.has('whyus-card-1') ? 'visible' : ''}`}
+          data-fade-id="whyus-card-1"
+        >
           <div className="service-icon">
             <Image
               src="/learn.gif"
@@ -34,7 +76,10 @@ const WhyUs = () => {
         </div>
 
         {/* Make Content Section */}
-        <div className="col-block service-item">
+        <div 
+          className={`col-block service-item fade-up fade-up-delay-300 ${visibleElements.has('whyus-card-2') ? 'visible' : ''}`}
+          data-fade-id="whyus-card-2"
+        >
           <div className="service-icon">
             <Image
               src="/content.gif"
@@ -54,7 +99,10 @@ const WhyUs = () => {
         </div>
 
         {/* Grow Section */}
-        <div className="col-block service-item">
+        <div 
+          className={`col-block service-item fade-up fade-up-delay-400 ${visibleElements.has('whyus-card-3') ? 'visible' : ''}`}
+          data-fade-id="whyus-card-3"
+        >
           <div className="service-icon">
             <Image
               src="/grow.gif"

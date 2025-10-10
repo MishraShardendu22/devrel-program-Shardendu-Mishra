@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { Switch } from "@/components/ui/switch"
 
@@ -11,6 +11,11 @@ interface MenuProps {
 
 const Menu = ({ isOpen, onClose }: MenuProps) => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   
   useEffect(() => {
     if (isOpen) {
@@ -193,11 +198,13 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             alignItems: 'center',
             justifyContent: 'flex-start'
           }}>
-            <Switch
-              checked={theme === 'dark'}
-              onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-              className="data-[state=checked]:bg-orange-500"
-            />
+            {mounted && (
+              <Switch
+                checked={theme === 'dark'}
+                onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                className="data-[state=checked]:bg-orange-500"
+              />
+            )}
             <span style={{
               marginLeft: '12px',
               color: '#8B0000',

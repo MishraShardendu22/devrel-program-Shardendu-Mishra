@@ -207,7 +207,7 @@ a[href^="#"] {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -215,39 +215,39 @@ a[href^="#"] {
   }
 }
 
-/* Fade-Up Animation - Viewport triggered */
+/* Fade-Up Animation - Viewport triggered - Faster and more pronounced */
 .fade-up {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(40px);
 }
 
 .fade-up.visible {
-  animation: fadeUp 0.6s ease-out forwards;
+  animation: fadeUp 0.4s ease-out forwards;
 }
 
-/* Staggered delays for fade-up animations */
+/* Staggered delays for fade-up animations - Quicker timing */
 .fade-up-delay-100.visible {
-  animation: fadeUp 0.6s ease-out 0.1s forwards;
+  animation: fadeUp 0.4s ease-out 0.05s forwards;
 }
 
 .fade-up-delay-200.visible {
-  animation: fadeUp 0.6s ease-out 0.2s forwards;
+  animation: fadeUp 0.4s ease-out 0.1s forwards;
 }
 
 .fade-up-delay-300.visible {
-  animation: fadeUp 0.6s ease-out 0.3s forwards;
+  animation: fadeUp 0.4s ease-out 0.15s forwards;
 }
 
 .fade-up-delay-400.visible {
-  animation: fadeUp 0.6s ease-out 0.4s forwards;
+  animation: fadeUp 0.4s ease-out 0.2s forwards;
 }
 
 .fade-up-delay-500.visible {
-  animation: fadeUp 0.6s ease-out 0.5s forwards;
+  animation: fadeUp 0.4s ease-out 0.25s forwards;
 }
 
 .fade-up-delay-600.visible {
-  animation: fadeUp 0.6s ease-out 0.6s forwards;
+  animation: fadeUp 0.4s ease-out 0.3s forwards;
 }
 
 /* Appear Animation Keyframes - For immediate load animations */

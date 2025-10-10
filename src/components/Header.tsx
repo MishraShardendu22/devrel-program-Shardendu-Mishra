@@ -1,6 +1,37 @@
+"use client"
+
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const Header = () => {
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-fade-id')
+            if (id) {
+              setVisibleElements(prev => new Set([...prev, id]))
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    )
+
+    const elements = document.querySelectorAll('.fade-up')
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
+
   return (
     <section id="home" className="s-home page-hero target-section">
       <div className="overlay"></div>
@@ -8,14 +39,25 @@ const Header = () => {
 
       <div className="home-content">
         <div className="row home-content__main">
-          <h1>
+          <h1 
+            className={`fade-up ${visibleElements.has('header-title') ? 'visible' : ''}`}
+            data-fade-id="header-title"
+          >
             Keploy Developer <br />
             Relations Program
           </h1>
-          <h3>Get into the world of DevRels and<br />
-          experience of being one for a month</h3>
+          <h3 
+            className={`fade-up fade-up-delay-100 ${visibleElements.has('header-subtitle') ? 'visible' : ''}`}
+            data-fade-id="header-subtitle"
+          >
+            Get into the world of DevRels and<br />
+            experience of being one for a month
+          </h3>
 
-          <div className="home-content__buttons">
+          <div 
+            className={`home-content__buttons fade-up fade-up-delay-200 ${visibleElements.has('header-buttons') ? 'visible' : ''}`}
+            data-fade-id="header-buttons"
+          >
             <Link
               href="https://forms.gle/Fr3TwNUni2RRnZhNA"
               className="btn btn--stroke"
@@ -32,7 +74,10 @@ const Header = () => {
         </div>
       </div>
 
-      <ul className="home-social">
+      <ul 
+        className={`home-social fade-up fade-up-delay-300 ${visibleElements.has('header-social') ? 'visible' : ''}`}
+        data-fade-id="header-social"
+      >
         <li>
           <a href="https://keploy.slack.com/" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-slack"></i>
@@ -65,7 +110,10 @@ const Header = () => {
         </li>
       </ul>
 
-      <div className="home-content__scroll">
+      <div 
+        className={`home-content__scroll fade-up fade-up-delay-400 ${visibleElements.has('header-scroll') ? 'visible' : ''}`}
+        data-fade-id="header-scroll"
+      >
         <a href="#about" className="scroll-link">
           Scroll Down
         </a>
@@ -75,3 +123,4 @@ const Header = () => {
 }
 
 export default Header
+

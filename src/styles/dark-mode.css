@@ -23,6 +23,13 @@
   background: #18181b;
 }
 
+.dark .header-menu-toggle {
+  position: fixed;
+  top: calc(24px + env(safe-area-inset-top));
+  right: clamp(20px, 4vw, 38px);
+  z-index: 650;
+}
+
 .dark .header-nav__list a {
   color: #e4e4e7;
 }

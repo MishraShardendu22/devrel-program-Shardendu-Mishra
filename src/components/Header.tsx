@@ -79,7 +79,7 @@ const Header = () => {
         data-fade-id="header-social"
       >
         <li>
-          <a href="https://keploy.slack.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-slack"></i>
             <span>Slack</span>
           </a>

@@ -24,6 +24,32 @@
   scrollbar-color: #6f0a0d #F5DEB3;
 }
 
+/* Responsive scrollbar for smaller screens */
+@media only screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+  
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+  }
+}
+
 /* Ensure body and html take full height */
 html, body, #__next {
   height: 100%;
@@ -40,11 +66,212 @@ html, body, #__next {
 /* Ensure proper text color in home section */
 .home-content h3 {
   color: rgba(255, 255, 255, 0.5) !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 .home-content h1 {
   color: #FFFFFF !important;
   font-family: "montserrat-bold", sans-serif !important;
+  font-size: 6.3rem !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+  white-space: normal !important;
+}
+
+.home-content__main {
+  max-width: 100% !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Responsive home content - Progressive scaling */
+@media only screen and (max-width: 1500px) {
+  .home-content h1 {
+    font-size: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-content h1 {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .home-content h1 {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-content h1 {
+    font-size: 3rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home-content h1 {
+    font-size: 3rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-content h1 {
+    font-size: 3rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.4rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-content h1 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .home-content h1 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.25rem !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home-content h1 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.15rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+  
+  .home-content__buttons {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .home-content__buttons .btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    text-align: center !important;
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .home-content h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.1rem !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .home-content h1 {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1.05rem !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .home-content h1 {
+    font-size: 1.7rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+  
+  .home-content h3 {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+  
+  .home-content__main {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }
 
 /* Display headings styling */
@@ -64,6 +291,43 @@ html, body, #__next {
   margin-top: 0;
 }
 
+/* Responsive heading styles */
+@media only screen and (max-width: 768px) {
+  .display-1 {
+    font-size: 3.2rem;
+    line-height: 1.3;
+  }
+  
+  .display-2 {
+    font-size: 2.6rem;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .display-1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+  }
+  
+  .display-2 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .display-1 {
+    font-size: 2.4rem;
+    line-height: 1.3;
+  }
+  
+  .display-2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
 /* Row styling */
 .row {
   width: 94%;
@@ -73,6 +337,25 @@ html, body, #__next {
 
 .col-full {
   width: 100%;
+}
+
+/* Responsive row padding */
+@media only screen and (max-width: 768px) {
+  .row {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    width: 88%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .row {
+    width: 85%;
+  }
 }
 
 /* Block grid styling */
@@ -114,6 +397,23 @@ html, body, #__next {
   .block-mob-full .col-block {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  
+  /* Stats section mobile adjustments */
+  .about-stats {
+    padding: 0 1rem;
+  }
+  
+  .stats__col {
+    margin-bottom: 2rem;
+  }
+  
+  .stats__count {
+    font-size: 3rem;
+  }
+  
+  .stats__col h5 {
+    font-size: 1.2rem;
   }
 }
 
@@ -1053,4 +1353,167 @@ html {
   .social_widget .list {
     justify-content: center;
   }
+}
+
+/* Navbar responsive styles */
+.s-header {
+  padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .s-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .header-logo img {
+    width: 120px !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .s-header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .header-logo img {
+    width: 100px !important;
+    height: auto !important;
+  }
+}
+
+/* Prevent horizontal scrolling on small screens */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Fix for sections on mobile */
+@media only screen and (max-width: 768px) {
+  .s-about,
+  .s-services,
+  .s-works,
+  .s-contact,
+  .s-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .section-header h1,
+  .section-header h3 {
+    padding: 0 1rem;
+  }
+  
+  .about-desc p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-desc p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .s-home {
+    min-height: 100vh !important;
+    height: auto !important;
+  }
+  
+  .home-content__main {
+    padding-top: 12rem !important;
+  }
+  
+  .about-desc p {
+    font-size: 1.3rem;
+  }
+  
+  .section-header h1,
+  .section-header h3 {
+    padding: 0 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .about-desc p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .home-content__main {
+    padding-top: 10rem !important;
+  }
+  
+  .about-desc p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Home social links responsive */
+@media only screen and (max-width: 768px) {
+  .home-social {
+    bottom: 3rem;
+  }
+  
+  .home-social li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .home-content__scroll {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-social {
+    display: none;
+  }
+  
+  .home-content__scroll {
+    display: none !important;
+  }
+}
+
+/* Menu responsive styles */
+.header-nav {
+  visibility: hidden;
+  overflow: hidden !important;
+}
+
+.header-nav * {
+  overflow: hidden !important;
+}
+
+.header-nav__content {
+  overflow: hidden !important;
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+.header-nav__content::-webkit-scrollbar {
+  display: none !important;  /* Chrome, Safari and Opera */
+}
+
+.header-nav.menu-is-open {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-nav {
+    max-width: 280px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header-nav {
+    max-width: 90vw !important;
+  }
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-is-open {
+  overflow: hidden;
 }

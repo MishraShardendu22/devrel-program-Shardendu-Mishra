@@ -26,21 +26,40 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
   }, [isOpen])
 
   return (
-    <nav 
-      className="header-nav"
-      style={{
-        position: 'fixed',
-        top: 0,
-        right: isOpen ? '0' : '-100%',
-        width: '320px',
-        height: '100vh',
-        backgroundColor: '#f5e6e8',
-        transition: 'right 0.3s ease',
-        zIndex: 1000,
-        boxShadow: isOpen ? '-2px 0 8px rgba(0, 0, 0, 0.1)' : 'none',
-        overflowX: 'hidden'
-      }}
-    >
+    <>
+      {/* Backdrop overlay */}
+      {isOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 999,
+            transition: 'opacity 0.3s ease'
+          }}
+          onClick={onClose}
+        />
+      )}
+      
+      <nav 
+        className="header-nav"
+        style={{
+          position: 'fixed',
+          top: 0,
+          right: isOpen ? '0' : '-100%',
+          width: '100%',
+          maxWidth: '320px',
+          height: '100vh',
+          backgroundColor: '#f5e6e8',
+          transition: 'right 0.3s ease',
+          zIndex: 1000,
+          boxShadow: isOpen ? '-2px 0 8px rgba(0, 0, 0, 0.1)' : 'none',
+          overflowX: 'hidden'
+        }}
+      >
       <div 
         className="header-nav__close" 
         onClick={onClose}
@@ -70,7 +89,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         style={{
           padding: '80px 30px 30px',
           height: '100%',
-          overflowY: 'auto',
+          overflowY: 'hidden',
           overflowX: 'hidden'
         }}
       >
@@ -80,7 +99,8 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           fontWeight: '600',
           marginBottom: '30px',
           letterSpacing: '2px',
-          textTransform: 'uppercase'
+          textTransform: 'uppercase',
+          whiteSpace: 'nowrap'
         }}>NAVIGATION</h3>
 
         <ul 
@@ -299,6 +319,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         </ul>
       </div>
     </nav>
+    </>
   )
 }
 

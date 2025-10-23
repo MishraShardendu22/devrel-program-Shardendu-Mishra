@@ -89,18 +89,15 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         style={{
           padding: '80px 30px 30px',
           height: '100%',
-          overflowY: 'hidden',
+          overflowY: 'auto',
           overflowX: 'hidden'
         }}
       >
-        <h3 style={{
+        <h3 className="menu-nav-title" style={{
           color: '#8B0000',
-          fontSize: '14px',
           fontWeight: '600',
-          marginBottom: '30px',
-          letterSpacing: '2px',
-          textTransform: 'uppercase',
-          whiteSpace: 'nowrap'
+          marginBottom: '10px',
+          textTransform: 'uppercase'
         }}>NAVIGATION</h3>
 
         <ul 
@@ -114,10 +111,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           <li style={{ marginBottom: '8px' }}>
             <a 
               href="#home"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -128,10 +125,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           <li style={{ marginBottom: '8px' }}>
             <a 
               href="#about"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -142,10 +139,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           <li style={{ marginBottom: '8px' }}>
             <a 
               href="#program"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -156,10 +153,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           <li style={{ marginBottom: '8px' }}>
             <a 
               href="#cohort"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -170,10 +167,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           <li style={{ marginBottom: '8px' }}>
             <a 
               href="#community"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -186,10 +183,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
               href="https://forms.gle/Fr3TwNUni2RRnZhNA" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="menu-nav-link"
               style={{
                 color: '#8B0000',
                 textDecoration: 'none',
-                fontSize: '16px',
                 fontWeight: '500',
                 padding: '8px 0',
                 display: 'block',
@@ -204,12 +201,10 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           paddingTop: '20px',
           marginBottom: '30px'
         }}>
-          <h3 style={{
+          <h3 className="menu-nav-title" style={{
             color: '#8B0000',
-            fontSize: '14px',
             fontWeight: '600',
             marginBottom: '15px',
-            letterSpacing: '2px',
             textTransform: 'uppercase'
           }}>THEME</h3>
           
@@ -225,10 +220,9 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="data-[state=checked]:bg-orange-500"
               />
             )}
-            <span style={{
+            <span className="menu-dark-mode-text" style={{
               marginLeft: '12px',
               color: '#8B0000',
-              fontSize: '14px',
               fontWeight: '500'
             }}>
               Dark Mode

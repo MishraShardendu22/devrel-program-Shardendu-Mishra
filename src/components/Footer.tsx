@@ -102,7 +102,7 @@ const Footer = () => {
               <p className="footer-desc">Let us be social</p>
               <ul className="footer-social-links">
                 <li>
-                  <a href="https://slack.keploy.io/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email" target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-slack"></i>
                   </a>
                 </li>

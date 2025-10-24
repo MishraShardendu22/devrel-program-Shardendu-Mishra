@@ -63,7 +63,7 @@ const Join = () => {
           />
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>
             <a 
-              href="https://keploy.slack.com/" 
+              href="https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="join-slack-button"
@@ -114,7 +114,7 @@ const Join = () => {
             
             <ul className="contact-social">
               <li>
-                <Link href="https://keploy.slack.com/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/" target="_blank" rel="noopener noreferrer">
                   <i className="fa fa-slack"></i>
                 </Link>
               </li>

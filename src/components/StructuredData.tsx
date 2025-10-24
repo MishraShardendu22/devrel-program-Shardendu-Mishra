@@ -12,13 +12,13 @@ export default function StructuredData() {
       "https://twitter.com/Keployio",
       "https://www.linkedin.com/company/keploy/",
       "https://www.youtube.com/@keploy",
-      "https://keploy.slack.com/",
+      "https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/",
       "https://github.com/keploy"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Community Support",
-      "url": "https://keploy.slack.com/"
+      "url": "https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/"
     }
   }
 

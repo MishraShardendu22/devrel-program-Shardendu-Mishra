@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -20,7 +20,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FF914D;
+  background-color: #ff914d;
   border-radius: 5px;
   border: 2px solid #ffffff;
 }
@@ -36,53 +36,53 @@
 /* Firefox scrollbar styling */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #FF914D #ffffff;
+  scrollbar-color: #ff914d #ffffff;
 }
 
 .dark * {
-  scrollbar-color: #FF914D #0a0a0a;
+  scrollbar-color: #ff914d #0a0a0a;
 }
 
 :root {
   /* Keploy Official Color Palette - Primary Colors */
-  --primary-50: #FFFFFF;
-  --primary-100: #FFB575;
-  --primary-200: #FFD0A0;
-  --primary-300: #FF914D; /* Main brand color */
-  --primary-400: #E67643;
-  --primary-500: #C95919;
+  --primary-50: #ffffff;
+  --primary-100: #ffb575;
+  --primary-200: #ffd0a0;
+  --primary-300: #ff914d; /* Main brand color */
+  --primary-400: #e67643;
+  --primary-500: #c95919;
 
   /* Secondary Colors - Dark Blues */
-  --secondary-50: #FFFFFF;
-  --secondary-100: #29456E;
-  --secondary-200: #537FA1;
-  --secondary-300: #00163D; /* Main text color */
-  --secondary-400: #000E27;
-  --secondary-500: #00061A;
+  --secondary-50: #ffffff;
+  --secondary-100: #29456e;
+  --secondary-200: #537fa1;
+  --secondary-300: #00163d; /* Main text color */
+  --secondary-400: #000e27;
+  --secondary-500: #00061a;
 
   /* Neutral Colors */
-  --neutral-100: #F5F5F5; /* Main page background */
-  --neutral-200: #FFFFFF; /* Card backgrounds */
-  --neutral-300: #E6E2D4; /* Borders and dividers */
+  --neutral-100: #f5f5f5; /* Main page background */
+  --neutral-200: #ffffff; /* Card backgrounds */
+  --neutral-300: #e6e2d4; /* Borders and dividers */
 
   /* Accent Colors */
-  --accent-100: #16704C;
-  --accent-200: #5F3131;
-  --accent-300: #EF546B;
-  --accent-400: #D9CD9C;
-  --accent-500: #E6E2D4;
+  --accent-100: #16704c;
+  --accent-200: #5f3131;
+  --accent-300: #ef546b;
+  --accent-400: #d9cd9c;
+  --accent-500: #e6e2d4;
 
   /* Grayscale */
-  --gray-100: #FBFBFB;
-  --gray-200: #EAEAEA;
-  --gray-300: #DFDFDF;
+  --gray-100: #fbfbfb;
+  --gray-200: #eaeaea;
+  --gray-300: #dfdfdf;
   --gray-400: #999999;
-  --gray-500: #7F7F7F;
+  --gray-500: #7f7f7f;
   --gray-600: #666666;
-  --gray-700: #4C4C4C;
+  --gray-700: #4c4c4c;
   --gray-800: #333333;
   --gray-900: #191919;
-  
+
   /* Standard theme variables */
   color-scheme: light;
   --radius: 0.5rem;
@@ -128,7 +128,7 @@
   --ring: var(--primary-300);
   --muted: var(--secondary-500);
   --muted-foreground: var(--gray-400);
-  
+
   color-scheme: dark;
 }
 
@@ -150,8 +150,12 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background-color: #FFF5ED; /* Light orangish background for light mode */
+  font-family:
+    var(--font-inter),
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #fff5ed; /* Light orangish background for light mode */
 }
 
 .dark body {
@@ -160,7 +164,11 @@ body {
 
 /* Font utility classes */
 .font-inter {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-inter),
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 /* Modern Button Styles - Keploy Theme */
@@ -170,13 +178,13 @@ body {
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   height: auto;
   line-height: 1.5;
   padding: 0.875rem 2rem;
-  margin: 0 .5rem 1rem 0;
-  background: #FF914D;
-  color: #FFFFFF;
+  margin: 0 0.5rem 1rem 0;
+  background: #ff914d;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
@@ -194,19 +202,19 @@ body {
 
 .btn--stroke {
   background: transparent !important;
-  border: 2px solid #FF914D;
-  color: #FF914D;
+  border: 2px solid #ff914d;
+  color: #ff914d;
   line-height: 1.5;
 }
 
 .btn--stroke:hover {
-  background: #FF914D !important;
-  border: 2px solid #FF914D;
-  color: #FFFFFF;
+  background: #ff914d !important;
+  border: 2px solid #ff914d;
+  color: #ffffff;
 }
 
 /* Ensure smooth scrolling for anchor links */
-a[href^="#"] {
+a[href^='#'] {
   scroll-behavior: smooth;
 }
 
@@ -357,8 +365,9 @@ a[href^="#"] {
 .animate-on-scroll {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.before-visible {
@@ -369,8 +378,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-1 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
 .animate-on-scroll-delay-1.before-visible {
@@ -381,8 +391,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-2 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s;
 }
 
 .animate-on-scroll-delay-2.before-visible {
@@ -393,8 +404,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-3 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s;
 }
 
 .animate-on-scroll-delay-3.before-visible {
@@ -405,8 +417,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-4 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s;
 }
 
 .animate-on-scroll-delay-4.before-visible {
@@ -417,8 +430,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-5 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
 }
 
 .animate-on-scroll-delay-5.before-visible {
@@ -429,8 +443,9 @@ a[href^="#"] {
 .animate-on-scroll-delay-6 {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s, 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s;
 }
 
 .animate-on-scroll-delay-6.before-visible {
@@ -444,7 +459,7 @@ a[href^="#"] {
 }
 
 #nprogress .bar {
-  background: #FF914D !important;
+  background: #ff914d !important;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -459,7 +474,9 @@ a[href^="#"] {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #FF914D, 0 0 5px #FF914D;
+  box-shadow:
+    0 0 10px #ff914d,
+    0 0 5px #ff914d;
   opacity: 1;
   transform: rotate(3deg) translate(0px, -4px);
 }

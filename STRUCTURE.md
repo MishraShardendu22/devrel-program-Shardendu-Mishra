@@ -91,19 +91,20 @@ The `app` directory uses Next.js 15's App Router with the following key files:
 
 All reusable UI components organized by feature:
 
-| Component | Purpose |
-|-----------|---------|
-| `Header.tsx` | Top header section |
-| `Navbar.tsx` | Navigation menu with logo and links |
-| `Menu.tsx` | Mobile hamburger menu |
-| `Hero.tsx` | Main hero section with CTA |
-| `WhyUs.tsx` | Benefits/features grid |
-| `Testimonial.tsx` | Testimonial cards/carousel |
-| `Join.tsx` | Call-to-action section |
-| `Footer.tsx` | Site footer with links and copyright |
-| `StructuredData.tsx` | JSON-LD structured data for SEO |
+| Component            | Purpose                              |
+| -------------------- | ------------------------------------ |
+| `Header.tsx`         | Top header section                   |
+| `Navbar.tsx`         | Navigation menu with logo and links  |
+| `Menu.tsx`           | Mobile hamburger menu                |
+| `Hero.tsx`           | Main hero section with CTA           |
+| `WhyUs.tsx`          | Benefits/features grid               |
+| `Testimonial.tsx`    | Testimonial cards/carousel           |
+| `Join.tsx`           | Call-to-action section               |
+| `Footer.tsx`         | Site footer with links and copyright |
+| `StructuredData.tsx` | JSON-LD structured data for SEO      |
 
 **Component Guidelines:**
+
 - Each component is a separate file
 - Use TypeScript for type safety
 - Export as named exports
@@ -115,19 +116,23 @@ All reusable UI components organized by feature:
 Shared code that can be imported throughout the app:
 
 #### `utils.ts`
+
 Common utility functions:
+
 ```typescript
-cn()           // Combine class names
-formatDate()   // Format dates consistently
-truncateText() // Truncate with ellipsis
+cn(); // Combine class names
+formatDate(); // Format dates consistently
+truncateText(); // Truncate with ellipsis
 ```
 
 #### `constants.ts`
+
 Application-wide constants:
+
 ```typescript
-SITE_CONFIG        // Site metadata, URLs
-PROGRAM_DETAILS    // Program duration, timelines
-SOCIAL_LINKS       // Social media URLs
+SITE_CONFIG; // Site metadata, URLs
+PROGRAM_DETAILS; // Program duration, timelines
+SOCIAL_LINKS; // Social media URLs
 ```
 
 ### `src/styles/` - CSS Files
@@ -142,6 +147,7 @@ Organized stylesheet architecture:
 - **`micons/`**: Custom icon font
 
 **Import order in `layout.tsx`:**
+
 1. `globals.css` (Next.js global styles with Tailwind)
 2. `base.css`
 3. `vendor.css`
@@ -160,6 +166,7 @@ Files served directly without processing:
 - **`testimonials/`**: Testimonial profile images
 
 **Best practices:**
+
 - Optimize images before adding (use WebP when possible)
 - Use descriptive filenames
 - Keep file sizes small for performance
@@ -176,14 +183,18 @@ Fonts are loaded using Next.js `localFont` for optimal performance.
 ## 🔧 Configuration Files
 
 ### `.editorconfig`
+
 Ensures consistent coding style across different editors:
+
 - 2-space indentation
 - UTF-8 encoding
 - LF line endings
 - Trim trailing whitespace
 
 ### `.prettierrc`
+
 Code formatting rules:
+
 - Single quotes
 - 2-space indentation
 - 100 character line length
@@ -191,27 +202,35 @@ Code formatting rules:
 - Trailing commas (ES5)
 
 ### `eslint.config.mjs`
+
 Linting rules for code quality:
+
 - Next.js recommended rules
 - TypeScript rules
 - React hooks rules
 - Custom rules for consistency
 
 ### `tsconfig.json`
+
 TypeScript compiler options:
+
 - Strict mode enabled
 - Path aliases (`@/*` → `./src/*`)
 - ES2017 target
 - Module resolution: bundler
 
 ### `next.config.ts`
+
 Next.js configuration:
+
 - Turbopack enabled for faster builds
 - Image optimization settings
 - Environment variables
 
 ### `tailwind.config.js`
+
 Tailwind CSS customization:
+
 - Custom colors
 - Font families
 - Breakpoints
@@ -226,6 +245,7 @@ The project uses a hybrid approach:
 3. **CSS Modules**: Not currently used, but supported
 
 **Styling precedence:**
+
 1. Inline Tailwind utilities
 2. Custom component classes
 3. Global styles
@@ -252,6 +272,7 @@ page.tsx (Homepage)
 ## 📦 Dependencies
 
 ### Core Dependencies
+
 - `next` (15.5.4): React framework
 - `react` (19.1.0): UI library
 - `react-dom` (19.1.0): React DOM renderer
@@ -259,6 +280,7 @@ page.tsx (Homepage)
 - `nodemailer`: Email functionality
 
 ### Dev Dependencies
+
 - `typescript`: Type checking
 - `eslint`: Linting
 - `prettier`: Code formatting
@@ -281,6 +303,7 @@ pnpm type-check   # TypeScript type checking
 ## 🔍 SEO & Performance
 
 ### SEO Features
+
 - ✅ Metadata in `layout.tsx`
 - ✅ Structured data (JSON-LD)
 - ✅ Sitemap generation
@@ -289,6 +312,7 @@ pnpm type-check   # TypeScript type checking
 - ✅ Semantic HTML
 
 ### Performance Optimizations
+
 - ✅ Server-side rendering
 - ✅ Image optimization (Next.js Image)
 - ✅ Font optimization (local fonts)
@@ -301,6 +325,7 @@ pnpm type-check   # TypeScript type checking
 ### Adding a New Component
 
 1. Create file in `src/components/`:
+
    ```typescript
    // src/components/NewSection.tsx
    export const NewSection = () => {
@@ -309,6 +334,7 @@ pnpm type-check   # TypeScript type checking
    ```
 
 2. Import in `page.tsx`:
+
    ```typescript
    import { NewSection } from '@/components/NewSection';
    ```
@@ -321,11 +347,13 @@ pnpm type-check   # TypeScript type checking
 ### Adding a New Page
 
 1. Create directory in `src/app/`:
+
    ```
    src/app/about/page.tsx
    ```
 
 2. Export default component:
+
    ```typescript
    export default function AboutPage() {
      return <div>About</div>;
@@ -337,6 +365,7 @@ pnpm type-check   # TypeScript type checking
 ### Adding Utility Functions
 
 1. Add to `src/lib/utils.ts`:
+
    ```typescript
    export function newUtility() {
      // Implementation

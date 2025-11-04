@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = '.lighthouseci';
-const files = fs.readdirSync(dir).filter(file => file.endsWith('.report.json'));
+const files = fs.readdirSync(dir).filter((file) => file.endsWith('.report.json'));
 
 if (files.length < 2) {
   console.error('❌ Not enough Lighthouse reports found.');
@@ -63,7 +63,6 @@ const md = `
   </tr>
 </table>
 `;
-
 
 fs.writeFileSync('lighthouse-comment.md', md);
 console.log('✅ Comment written to lighthouse-comment.md');

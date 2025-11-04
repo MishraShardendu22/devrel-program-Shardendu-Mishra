@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import Image from "next/image"
+import Image from 'next/image';
 
 const WhyUs = () => {
   return (
@@ -16,22 +16,19 @@ const WhyUs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div 
+          <div
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
-            style={{ 
+            style={{
               backgroundColor: 'var(--neutral-200)',
-              borderBottomColor: 'var(--primary-300)'
+              borderBottomColor: 'var(--primary-300)',
             }}
           >
             <div className="mb-6 flex items-center justify-center">
-              <div className="relative w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--accent-500)' }}>
-                <Image
-                  src="/learn.gif"
-                  alt="Learn"
-                  width={60}
-                  height={60}
-                  unoptimized
-                />
+              <div
+                className="relative w-20 h-20 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--accent-500)' }}
+              >
+                <Image src="/learn.gif" alt="Learn" width={60} height={60} unoptimized />
               </div>
             </div>
             <div>
@@ -44,22 +41,19 @@ const WhyUs = () => {
             </div>
           </div>
 
-          <div 
+          <div
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
-            style={{ 
+            style={{
               backgroundColor: 'var(--neutral-200)',
-              borderBottomColor: 'var(--primary-300)'
+              borderBottomColor: 'var(--primary-300)',
             }}
           >
             <div className="mb-6 flex items-center justify-center">
-              <div className="relative w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--accent-500)' }}>
-                <Image
-                  src="/content.gif"
-                  alt="Make Content"
-                  width={60}
-                  height={60}
-                  unoptimized
-                />
+              <div
+                className="relative w-20 h-20 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--accent-500)' }}
+              >
+                <Image src="/content.gif" alt="Make Content" width={60} height={60} unoptimized />
               </div>
             </div>
             <div>
@@ -72,22 +66,19 @@ const WhyUs = () => {
             </div>
           </div>
 
-          <div 
+          <div
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
-            style={{ 
+            style={{
               backgroundColor: 'var(--neutral-200)',
-              borderBottomColor: 'var(--primary-300)'
+              borderBottomColor: 'var(--primary-300)',
             }}
           >
             <div className="mb-6 flex items-center justify-center">
-              <div className="relative w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--accent-500)' }}>
-                <Image
-                  src="/grow.gif"
-                  alt="Grow"
-                  width={60}
-                  height={60}
-                  unoptimized
-                />
+              <div
+                className="relative w-20 h-20 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--accent-500)' }}
+              >
+                <Image src="/grow.gif" alt="Grow" width={60} height={60} unoptimized />
               </div>
             </div>
             <div>
@@ -102,7 +93,7 @@ const WhyUs = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WhyUs
+export default WhyUs;

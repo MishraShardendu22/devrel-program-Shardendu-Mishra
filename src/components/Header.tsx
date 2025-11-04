@@ -1,14 +1,15 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import Image from "next/image"
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   return (
-    <section id="home" className="relative w-full min-h-[85vh] flex items-center overflow-visible pt-20">
-
-
-      <div className="absolute right-20 md:right-32 lg:right-40 top-1/2 -translate-y-1/2 w-80 h-80 md:w-112 md:h-112 lg:w-128 lg:h-128 hidden md:block">
+    <section
+      id="home"
+      className="relative w-full min-h-[85vh] flex items-center overflow-visible pt-20"
+    >
+      <div className="absolute right-20 md:right-32 lg:right-40 top-1/2 -translate-y-1/2 w-80 h-80 md:w-md md:h-112 lg:w-lg lg:h-128 hidden md:block">
         <Image
           src="/Theme/banner-bunny.webp"
           alt="Keploy Banner"
@@ -17,7 +18,7 @@ const Header = () => {
           className="object-contain opacity-60 dark:opacity-40"
         />
       </div>
-      
+
       <div className="relative w-full z-10 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight text-left mb-6">
@@ -47,10 +48,10 @@ const Header = () => {
 
       <ul className="list-none m-0 fixed top-1/2 right-8 -translate-y-1/2 z-40 hidden lg:block">
         <li className="mb-3">
-          <a 
-            href="https://github.com/keploy/keploy" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://github.com/keploy/keploy"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Star us on GitHub"
             title="Star us on GitHub"
@@ -59,10 +60,10 @@ const Header = () => {
           </a>
         </li>
         <li className="mb-3">
-          <a 
-            href="https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Slack"
             title="Join us on Slack"
@@ -71,10 +72,10 @@ const Header = () => {
           </a>
         </li>
         <li className="mb-3">
-          <a 
-            href="https://x.com/Keployio" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://x.com/Keployio"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Twitter"
             title="Follow us on Twitter/X"
@@ -83,10 +84,10 @@ const Header = () => {
           </a>
         </li>
         <li className="mb-3">
-          <a 
-            href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="YouTube"
             title="Subscribe on YouTube"
@@ -95,10 +96,10 @@ const Header = () => {
           </a>
         </li>
         <li className="mb-3">
-          <a 
-            href="https://www.linkedin.com/company/keploy/posts/?feedView=all" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.linkedin.com/company/keploy/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="LinkedIn"
             title="Follow us on LinkedIn"
@@ -107,10 +108,10 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a 
-            href="https://keploy.io/blog" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://keploy.io/blog"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Blog"
             title="Read our Blog"
@@ -121,8 +122,8 @@ const Header = () => {
       </ul>
 
       <div className="absolute left-1/2 -translate-x-1/2 bottom-8">
-        <a 
-          href="#about" 
+        <a
+          href="#about"
           className="font-semibold text-xs uppercase tracking-wider relative inline-flex flex-col items-center gap-2 transition-all duration-300 group text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
         >
           <span>Scroll Down</span>
@@ -132,7 +133,7 @@ const Header = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

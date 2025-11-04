@@ -30,289 +30,166 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
       {/* Backdrop overlay */}
       {isOpen && (
         <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 999,
-            transition: 'opacity 0.3s ease'
-          }}
+          className="fixed inset-0 bg-black/60 z-999 transition-opacity duration-300 backdrop-blur-sm"
           onClick={onClose}
         />
       )}
       
       <nav 
-        className="header-nav"
+        className="fixed top-0 w-full max-w-[380px] h-screen bg-card z-1000 overflow-x-hidden transition-[right] duration-500 ease-in-out shadow-2xl border-l border-border"
         style={{
-          position: 'fixed',
-          top: 0,
-          right: isOpen ? '0' : '-100%',
-          width: '100%',
-          maxWidth: '320px',
-          height: '100vh',
-          backgroundColor: '#f5e6e8',
-          transition: 'right 0.3s ease',
-          zIndex: 1000,
-          boxShadow: isOpen ? '-2px 0 8px rgba(0, 0, 0, 0.1)' : 'none',
-          overflowX: 'hidden'
+          right: isOpen ? '0' : '-100%'
         }}
       >
-      <div 
-        className="header-nav__close" 
-        onClick={onClose}
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '20px',
-          color: '#8B0000',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: '400',
-          padding: '5px',
-          backgroundColor: '#d4b5b7',
-          borderRadius: '3px',
-          width: '35px',
-          height: '35px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <span>×</span>
-      </div>
-
-      <div 
-        className="header-nav__content"
-        style={{
-          padding: '80px 30px 30px',
-          height: '100%',
-          overflowY: 'auto',
-          overflowX: 'hidden'
-        }}
-      >
-        <h3 className="menu-nav-title" style={{
-          color: '#8B0000',
-          fontWeight: '600',
-          marginBottom: '10px',
-          textTransform: 'uppercase'
-        }}>NAVIGATION</h3>
-
-        <ul 
-          className="header-nav__list"
-          style={{
-            listStyle: 'none',
-            padding: 0,
-            margin: '0 0 40px 0'
-          }}
+        {/* Close button */}
+        <button
+          className="absolute top-5 right-5 text-primary cursor-pointer text-3xl font-light p-1.5 bg-background hover:bg-accent rounded-lg flex items-center justify-center w-10 h-10 transition-all duration-300 hover:scale-110 hover:rotate-90 shadow-md border border-border"
+          onClick={onClose}
+          aria-label="Close menu"
         >
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="#home"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >Home</a>
-          </li>
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="#about"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >About</a>
-          </li>
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="#program"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >Program</a>
-          </li>
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="#cohort"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >Next Cohort</a>
-          </li>
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="#community"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >Community</a>
-          </li>
-          <li style={{ marginBottom: '8px' }}>
-            <a 
-              href="https://forms.gle/Fr3TwNUni2RRnZhNA" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="menu-nav-link"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontWeight: '500',
-                padding: '8px 0',
-                display: 'block',
-                transition: 'all 0.2s ease'
-              }}
-            >Join</a>
-          </li>
-        </ul>
+          <span>×</span>
+        </button>
 
-        <div style={{
-          borderTop: '1px solid rgba(139, 0, 0, 0.2)',
-          paddingTop: '20px',
-          marginBottom: '30px'
-        }}>
-          <h3 className="menu-nav-title" style={{
-            color: '#8B0000',
-            fontWeight: '600',
-            marginBottom: '15px',
-            textTransform: 'uppercase'
-          }}>THEME</h3>
-          
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-start'
-          }}>
-            {mounted && (
-              <Switch
-                checked={theme === 'dark'}
-                onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-                className="data-[state=checked]:bg-orange-500"
-              />
-            )}
-            <span className="menu-dark-mode-text" style={{
-              marginLeft: '12px',
-              color: '#8B0000',
-              fontWeight: '500'
-            }}>
-              Dark Mode
-            </span>
+        <div className="pt-20 px-8 pb-8 h-full overflow-y-auto overflow-x-hidden">
+          {/* Navigation Section */}
+          <h3 className="text-primary font-bold mb-5 uppercase text-sm tracking-[0.15rem]">
+            Navigation
+          </h3>
+
+          <ul className="list-none p-0 m-0 mb-8 space-y-0.5">
+            <li>
+              <a 
+                href="#home"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+                onClick={onClose}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#about"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+                onClick={onClose}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#services"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+                onClick={onClose}
+              >
+                Program
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#cohort"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+                onClick={onClose}
+              >
+                Next Cohort
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#join"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+                onClick={onClose}
+              >
+                Community
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://forms.gle/Fr3TwNUni2RRnZhNA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground no-underline font-medium text-base py-3 px-4 block rounded-lg transition-all duration-200 hover:bg-accent hover:text-primary hover:translate-x-1"
+              >
+                Join Program
+              </a>
+            </li>
+          </ul>
+
+          {/* Theme Toggle Section */}
+          <div className="border-t border-border pt-6 mb-6">
+            <h3 className="text-primary font-bold mb-4 uppercase text-sm tracking-[0.15rem]">
+              Theme
+            </h3>
+            
+            <div className="flex items-center justify-between bg-background rounded-lg p-3.5 hover:bg-accent transition-all duration-200 border border-border">
+              <span className="text-foreground font-medium text-base">
+                Dark Mode
+              </span>
+              {mounted && (
+                <Switch
+                  checked={theme === 'dark'}
+                  onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                  className="data-[state=checked]:bg-primary data-[state=unchecked]:bg-muted"
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Social Links Section */}
+          <div className="border-t border-border pt-6">
+            <h3 className="text-primary font-bold mb-4 uppercase text-sm tracking-[0.15rem]">
+              Connect
+            </h3>
+            
+            <div className="flex flex-wrap gap-2.5">
+              <a 
+                href="https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
+                aria-label="Slack"
+              >
+                <i className="fa fa-slack text-lg"></i>
+              </a>
+              <a 
+                href="https://x.com/Keployio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
+                aria-label="Twitter"
+              >
+                <i className="fa fa-twitter text-lg"></i>
+              </a>
+              <a 
+                href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
+                aria-label="YouTube"
+              >
+                <i className="fa fa-youtube-play text-lg"></i>
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/keploy/posts/?feedView=all" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
+                aria-label="LinkedIn"
+              >
+                <i className="fa fa-linkedin text-lg"></i>
+              </a>
+              <a 
+                href="https://keploy.io/blog" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
+                aria-label="Blog"
+              >
+                <i className="fa fa-rss text-lg"></i>
+              </a>
+            </div>
           </div>
         </div>
-
-        <ul 
-          className="header-nav__social"
-          style={{
-            listStyle: 'none',
-            padding: 0,
-            margin: 0,
-            display: 'flex',
-            gap: '15px'
-          }}
-        >
-          <li>
-            <a 
-              href="https://keploy.slack.com/join/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg#/shared-invite/email/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontSize: '18px'
-              }}
-            >
-              <i className="fa fa-slack"></i>
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://x.com/Keployio" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontSize: '18px'
-              }}
-            >
-              <i className="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontSize: '18px'
-              }}
-            >
-              <i className="fa fa-youtube-play"></i>
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://www.linkedin.com/company/keploy/posts/?feedView=all" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontSize: '18px'
-              }}
-            >
-              <i className="fa fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://keploy.io/blog" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                color: '#8B0000',
-                textDecoration: 'none',
-                fontSize: '18px'
-              }}
-            >
-              <i className="fa fa-rss"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
     </>
   )
 }

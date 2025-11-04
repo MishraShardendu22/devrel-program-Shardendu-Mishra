@@ -1,32 +1,14 @@
-import type { Metadata } from "next";
-import { Lora, Montserrat } from "next/font/google";
 import "./globals.css";
-import "../styles/fonts.css";
-import "../styles/base.css";
-import "../styles/vendor.css";
-import "../styles/main.css";
-import "../styles/dark-mode.css";
-import "../styles/font-awesome/css/font-awesome.min.css";
-import "../styles/micons/micons.css";
-import "./custom.css";
-import "../styles/font-fix.css";
-import Navbar from "@/components/Navbar";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import StructuredData from "@/components/StructuredData";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import NProgressProvider from "@/components/NProgressProvider";
 
-const lora = Lora({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-lora",
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -111,8 +93,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <link
           rel="stylesheet"
           href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
@@ -120,7 +109,7 @@ export default function RootLayout({
         <link rel="icon" href="/keploy-logo.png" type="image/png" />
       </head>
       <body
-        className={`${lora.variable} ${montserrat.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -130,7 +119,6 @@ export default function RootLayout({
         >
           <NProgressProvider />
           <StructuredData />
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>

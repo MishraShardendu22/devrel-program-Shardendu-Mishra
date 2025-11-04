@@ -3,101 +3,145 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --color-background: #ffffff;
-  --color-foreground: #171717;
+/* Custom Scrollbar Styling - Keploy Theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
-  /* Additional color variables for theming */
-  --card-bg: #ffffff;
-  --card-border: #e5e7eb;
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-hover: #ea580c;
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-left: 1px solid #e2e8f0;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #0a0a0a;
+  border-left: 1px solid #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF914D;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7a2e;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FF914D #ffffff;
+}
+
+.dark * {
+  scrollbar-color: #FF914D #0a0a0a;
+}
+
+:root {
+  /* Keploy Official Color Palette - Primary Colors */
+  --primary-50: #FFFFFF;
+  --primary-100: #FFB575;
+  --primary-200: #FFD0A0;
+  --primary-300: #FF914D; /* Main brand color */
+  --primary-400: #E67643;
+  --primary-500: #C95919;
+
+  /* Secondary Colors - Dark Blues */
+  --secondary-50: #FFFFFF;
+  --secondary-100: #29456E;
+  --secondary-200: #537FA1;
+  --secondary-300: #00163D; /* Main text color */
+  --secondary-400: #000E27;
+  --secondary-500: #00061A;
+
+  /* Neutral Colors */
+  --neutral-100: #F5F5F5; /* Main page background */
+  --neutral-200: #FFFFFF; /* Card backgrounds */
+  --neutral-300: #E6E2D4; /* Borders and dividers */
+
+  /* Accent Colors */
+  --accent-100: #16704C;
+  --accent-200: #5F3131;
+  --accent-300: #EF546B;
+  --accent-400: #D9CD9C;
+  --accent-500: #E6E2D4;
+
+  /* Grayscale */
+  --gray-100: #FBFBFB;
+  --gray-200: #EAEAEA;
+  --gray-300: #DFDFDF;
+  --gray-400: #999999;
+  --gray-500: #7F7F7F;
+  --gray-600: #666666;
+  --gray-700: #4C4C4C;
+  --gray-800: #333333;
+  --gray-900: #191919;
+  
+  /* Standard theme variables */
   color-scheme: light;
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.5rem;
+  --background: var(--neutral-100);
+  --foreground: var(--secondary-300);
+  --card: var(--neutral-200);
+  --card-foreground: var(--secondary-300);
+  --popover: var(--neutral-200);
+  --popover-foreground: var(--secondary-300);
+  --primary: var(--primary-300);
+  --primary-foreground: #ffffff;
+  --secondary: var(--neutral-100);
+  --secondary-foreground: var(--secondary-300);
+  --accent: var(--accent-500);
+  --accent-foreground: var(--secondary-300);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: var(--gray-300);
+  --input: var(--gray-300);
+  --ring: var(--primary-300);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--gray-500);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --color-background: #0a0a0a;
-  --color-foreground: #e4e4e7;
-
-  /* Dark mode color variables - Professional palette */
-  --card-bg: #18181b;
-  --card-border: #27272a;
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-hover: #fb923c;
+  /* Dark theme - Keploy colors adapted for dark mode */
+  --background: var(--secondary-400);
+  --foreground: var(--neutral-200);
+  --card: var(--secondary-300);
+  --card-foreground: var(--neutral-200);
+  --popover: var(--secondary-300);
+  --popover-foreground: var(--neutral-200);
+  --primary: var(--primary-300);
+  --primary-foreground: #ffffff;
+  --secondary: var(--secondary-500);
+  --secondary-foreground: var(--neutral-200);
+  --accent: var(--secondary-100);
+  --accent-foreground: var(--neutral-200);
+  --destructive: #f87171;
+  --destructive-foreground: #ffffff;
+  --border: var(--secondary-100);
+  --input: var(--secondary-100);
+  --ring: var(--primary-300);
+  --muted: var(--secondary-500);
+  --muted-foreground: var(--gray-400);
+  
   color-scheme: dark;
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     --background: #0a0a0a;
-    --foreground: #e4e4e7;
+    --foreground: #f8fafc;
     --color-background: #0a0a0a;
-    --color-foreground: #e4e4e7;
-    --card-bg: #18181b;
-    --card-border: #27272a;
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
+    --color-foreground: #f8fafc;
+    --card-bg: #0f172a;
+    --card-border: #1e293b;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
   }
 }
 
@@ -106,49 +150,54 @@ html {
 }
 
 body {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 /* Font utility classes */
-.font-lora {
-  font-family: var(--font-lora), serif;
+.font-inter {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
-.font-montserrat {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
-}
-
-/* Additional button styles */
+/* Modern Button Styles - Keploy Theme */
 .btn {
   display: inline-block;
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.2rem;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .3rem;
-  height: 5.4rem;
-  line-height: 5.4rem;
-  padding: 0 3rem;
-  margin: 0 .3rem 1.2rem 0;
-  background: #6f0a0d;
+  letter-spacing: .1rem;
+  height: auto;
+  line-height: 1.5;
+  padding: 0.875rem 2rem;
+  margin: 0 .5rem 1rem 0;
+  background: #FF914D;
   color: #FFFFFF;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
   border: none;
-  -webkit-transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #ff7a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 145, 77, 0.3);
 }
 
 .btn--stroke {
   background: transparent !important;
-  border: 3px solid #FFFFFF;
-  line-height: 4.8rem;
+  border: 2px solid #FF914D;
+  color: #FF914D;
+  line-height: 1.5;
 }
 
 .btn--stroke:hover {
-  border: 3px solid #ff904d;
-  color: #ff904d;
+  background: #FF914D !important;
+  border: 2px solid #FF914D;
+  color: #FFFFFF;
 }
 
 /* Ensure smooth scrolling for anchor links */
@@ -384,13 +433,13 @@ a[href^="#"] {
   transform: translateY(30px);
 }
 
-/* NProgress Yellow Loading Bar Styles */
+/* NProgress Orange Loading Bar Styles - Keploy Theme */
 #nprogress {
   pointer-events: none;
 }
 
 #nprogress .bar {
-  background: #fbbf24 !important;
+  background: #FF914D !important;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -405,7 +454,7 @@ a[href^="#"] {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #fbbf24, 0 0 5px #fbbf24;
+  box-shadow: 0 0 10px #FF914D, 0 0 5px #FF914D;
   opacity: 1;
   transform: rotate(3deg) translate(0px, -4px);
 }

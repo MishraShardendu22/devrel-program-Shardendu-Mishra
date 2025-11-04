@@ -5,16 +5,10 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
-/**
- * Theme toggle switch component
- * Beautiful toggle switch with smooth animations
- * Accessible with keyboard navigation and screen readers
- */
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // Prevent hydration mismatch by only rendering after mount
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -55,7 +49,6 @@ export function ThemeToggle() {
         )}
       </span>
 
-      {/* Background Icons */}
       <span
         className={cn(
           'absolute left-2 transition-opacity duration-300',

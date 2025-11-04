@@ -1,6 +1,9 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { SITE_CONFIG } from "@/lib/constants"
+import Link from "next/link"
+import Image from "next/image"
 
 const Hero = () => {
   const [counters, setCounters] = useState({
@@ -10,7 +13,6 @@ const Hero = () => {
     onboarded: 0
   })
 
-  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
   const sectionRef = useRef<HTMLDivElement>(null)
   const [hasAnimated, setHasAnimated] = useState(false)
 
@@ -32,32 +34,10 @@ const Hero = () => {
       counterObserver.observe(currentSection)
     }
 
-    // Fade-up animation observer
-    const fadeObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('data-fade-id')
-            if (id) {
-              setVisibleElements(prev => new Set([...prev, id]))
-            }
-          }
-        })
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-      }
-    )
-
-    const elements = document.querySelectorAll('.fade-up')
-    elements.forEach((el) => fadeObserver.observe(el))
-
     return () => {
       if (currentSection) {
         counterObserver.unobserve(currentSection)
       }
-      elements.forEach((el) => fadeObserver.unobserve(el))
     }
   }, [hasAnimated])
 
@@ -92,66 +72,130 @@ const Hero = () => {
   }
 
   return (
-    <section id="about" className="s-about target-section" ref={sectionRef}>
-      <div className="row section-header has-bottom-sep">
-        <div className="col-full">
-          <h3 
-            className={`fade-up ${visibleElements.has('hero-subtitle') ? 'visible' : ''}`}
-            data-fade-id="hero-subtitle"
-          >
-            Hello There
-          </h3>
-          <h1 
-            className={`display-1 fade-up fade-up-delay-100 ${visibleElements.has('hero-title') ? 'visible' : ''}`}
-            data-fade-id="hero-title"
-          >
-            We Are Keploy
+    <section id="about" className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden" ref={sectionRef}>
+      <div className="absolute inset-0">
+        <Image
+          src="/Theme/demo-thumbnail.webp"
+          alt="Keploy DevRel"
+          fill
+          className="object-cover opacity-12"
+          priority
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="text-center pb-12 md:pb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tighter mb-6" style={{ color: 'var(--secondary-300)' }}>
+            Join the <span style={{ color: 'var(--primary-300)' }}>Keploy</span> DevRel Program
           </h1>
-        </div>
-      </div>
-
-      <div className="row about-desc">
-        <div className="col-full">
-          <p 
-            className={`fade-up fade-up-delay-200 ${visibleElements.has('hero-desc') ? 'visible' : ''}`}
-            data-fade-id="hero-desc"
-          >
-            Keploy is a functional testing toolkit for developers. As an open source organisation, we
-            believe everything should be community-driven. We want folks to come together with
-            us and experience what it is like to be that DevRel and learn and grow with the
-            experience they gain! Here&apos;s the DevRel Program in Numbers
+          <p className="text-lg md:text-xl mb-8" style={{ color: 'var(--gray-600)' }}>
+            Experience the world of Developer Relations for a month. Learn API testing, create content, and grow your community skills with Keploy.
           </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href={SITE_CONFIG.links.apply}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 font-medium text-white rounded-lg shadow-lg transition-all duration-150 ease-in-out"
+              style={{ backgroundColor: 'var(--primary-300)' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-400)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-300)'}
+            >
+              Apply Now
+            </Link>
+            <Link
+              href={SITE_CONFIG.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 font-medium rounded-lg border-2 shadow-md transition-all duration-150 ease-in-out"
+              style={{ 
+                borderColor: 'var(--primary-300)', 
+                color: 'var(--primary-300)',
+                backgroundColor: 'transparent'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'var(--primary-300)'
+                e.currentTarget.style.color = '#ffffff'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent'
+                e.currentTarget.style.color = 'var(--primary-300)'
+              }}
+            >
+              View on GitHub
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <div className="row about-stats stats block-1-4 block-m-1-2 block-mob-full">
-        <div 
-          className={`col-block stats__col fade-up fade-up-delay-300 ${visibleElements.has('hero-stat-1') ? 'visible' : ''}`}
-          data-fade-id="hero-stat-1"
-        >
-          <div className="stats__count">{counters.cohorts}</div>
-          <h5>Cohorts</h5>
-        </div>
-        <div 
-          className={`col-block stats__col fade-up fade-up-delay-400 ${visibleElements.has('hero-stat-2') ? 'visible' : ''}`}
-          data-fade-id="hero-stat-2"
-        >
-          <div className="stats__count">{counters.applications}</div>
-          <h5>Applications</h5>
-        </div>
-        <div 
-          className={`col-block stats__col fade-up fade-up-delay-500 ${visibleElements.has('hero-stat-3') ? 'visible' : ''}`}
-          data-fade-id="hero-stat-3"
-        >
-          <div className="stats__count">{counters.devrels}</div>
-          <h5>DevRels</h5>
-        </div>
-        <div 
-          className={`col-block stats__col fade-up fade-up-delay-600 ${visibleElements.has('hero-stat-4') ? 'visible' : ''}`}
-          data-fade-id="hero-stat-4"
-        >
-          <div className="stats__count">{counters.onboarded}</div>
-          <h5>Onboarded</h5>
+        {/* Stats Section */}
+        <div className="pt-12 md:pt-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: 'var(--secondary-300)' }}>
+            DevRel Program in Numbers
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {/* Cohorts */}
+            <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
+              style={{ 
+                backgroundColor: 'var(--neutral-200)',
+                borderBottomColor: 'var(--primary-300)'
+              }}
+            >
+              <div className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--primary-300)' }}>
+                {counters.cohorts}
+              </div>
+              <h5 className="text-sm font-semibold uppercase tracking-wide" style={{ color: 'var(--gray-600)' }}>
+                Cohorts
+              </h5>
+            </div>
+
+            {/* Applications */}
+            <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
+              style={{ 
+                backgroundColor: 'var(--neutral-200)',
+                borderBottomColor: 'var(--primary-300)'
+              }}
+            >
+              <div className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--primary-300)' }}>
+                {counters.applications}+
+              </div>
+              <h5 className="text-sm font-semibold uppercase tracking-wide" style={{ color: 'var(--gray-600)' }}>
+                Applications
+              </h5>
+            </div>
+
+            {/* DevRels */}
+            <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
+              style={{ 
+                backgroundColor: 'var(--neutral-200)',
+                borderBottomColor: 'var(--primary-300)'
+              }}
+            >
+              <div className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--primary-300)' }}>
+                {counters.devrels}+
+              </div>
+              <h5 className="text-sm font-semibold uppercase tracking-wide" style={{ color: 'var(--gray-600)' }}>
+                DevRels
+              </h5>
+            </div>
+
+            {/* Onboarded */}
+            <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
+              style={{ 
+                backgroundColor: 'var(--neutral-200)',
+                borderBottomColor: 'var(--primary-300)'
+              }}
+            >
+              <div className="text-4xl md:text-5xl font-extrabold mb-2" style={{ color: 'var(--primary-300)' }}>
+                {counters.onboarded}+
+              </div>
+              <h5 className="text-sm font-semibold uppercase tracking-wide" style={{ color: 'var(--gray-600)' }}>
+                Onboarded
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
     </section>

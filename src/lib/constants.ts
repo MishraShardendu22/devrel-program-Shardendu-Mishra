@@ -24,6 +24,8 @@ export const PROGRAM_DETAILS = {
 export const SOCIAL_LINKS = {
   slack: SITE_CONFIG.links.slack,
   github: SITE_CONFIG.links.github,
-  twitter: 'https://twitter.com/keploy_io',
+  twitter: 'https://twitter.com/Keployio',
   linkedin: 'https://www.linkedin.com/company/keploy',
+  youtube: 'https://www.youtube.com/@keploy',
+  blog: 'https://keploy.io/blog',
 };

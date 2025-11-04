@@ -78,7 +78,7 @@ const Hero = () => {
           src="/Theme/demo-thumbnail.webp"
           alt="Keploy DevRel"
           fill
-          className="object-cover opacity-12"
+          className="object-contain opacity-12"
           priority
         />
       </div>
@@ -92,7 +92,6 @@ const Hero = () => {
             Experience the world of Developer Relations for a month. Learn API testing, create content, and grow your community skills with Keploy.
           </p>
           
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href={SITE_CONFIG.links.apply}
@@ -129,14 +128,12 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="pt-12 md:pt-16">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-[var(--secondary-300)] dark:text-primary">
             DevRel Program in Numbers
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {/* Cohorts */}
             <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
               style={{ 
                 backgroundColor: 'var(--neutral-200)',
@@ -151,7 +148,6 @@ const Hero = () => {
               </h5>
             </div>
 
-            {/* Applications */}
             <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
               style={{ 
                 backgroundColor: 'var(--neutral-200)',
@@ -166,7 +162,6 @@ const Hero = () => {
               </h5>
             </div>
 
-            {/* DevRels */}
             <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
               style={{ 
                 backgroundColor: 'var(--neutral-200)',
@@ -181,7 +176,6 @@ const Hero = () => {
               </h5>
             </div>
 
-            {/* Onboarded */}
             <div className="rounded-lg p-6 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
               style={{ 
                 backgroundColor: 'var(--neutral-200)',

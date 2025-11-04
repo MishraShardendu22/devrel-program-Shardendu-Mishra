@@ -27,7 +27,6 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
 
   return (
     <>
-      {/* Backdrop overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/60 z-999 transition-opacity duration-300 backdrop-blur-sm"
@@ -41,7 +40,6 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
           right: isOpen ? '0' : '-100%'
         }}
       >
-        {/* Close button */}
         <button
           className="absolute top-5 right-5 text-primary cursor-pointer text-3xl font-light p-1.5 bg-background hover:bg-accent rounded-lg flex items-center justify-center w-10 h-10 transition-all duration-300 hover:scale-110 hover:rotate-90 shadow-md border border-border"
           onClick={onClose}
@@ -51,7 +49,6 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
         </button>
 
         <div className="pt-20 px-8 pb-8 h-full overflow-y-auto overflow-x-hidden">
-          {/* Navigation Section */}
           <h3 className="text-primary font-bold mb-5 uppercase text-sm tracking-[0.15rem]">
             Navigation
           </h3>
@@ -114,7 +111,6 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             </li>
           </ul>
 
-          {/* Theme Toggle Section */}
           <div className="border-t border-border pt-6 mb-6">
             <h3 className="text-primary font-bold mb-4 uppercase text-sm tracking-[0.15rem]">
               Theme
@@ -134,7 +130,6 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
             </div>
           </div>
 
-          {/* Social Links Section */}
           <div className="border-t border-border pt-6">
             <h3 className="text-primary font-bold mb-4 uppercase text-sm tracking-[0.15rem]">
               Connect

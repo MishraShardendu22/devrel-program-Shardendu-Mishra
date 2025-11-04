@@ -1,7 +1,3 @@
-/**
- * Application constants
- */
-
 export const SITE_CONFIG = {
   name: 'Keploy DevRel Program',
   description: 'Join the Keploy Developer Relations Program and grow your skills in community building, content creation, and developer advocacy.',

@@ -6,9 +6,8 @@ const WhyUs = () => {
   return (
     <section id="services" className="relative py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        {/* Header */}
         <div className="text-center pb-12 md:pb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-4 text-[var(--secondary-300)] dark:text-primary">
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-4 text-(--secondary-300) dark:text-primary">
             What You'll Experience
           </h2>
           <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>
@@ -16,9 +15,7 @@ const WhyUs = () => {
           </p>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Learn Card */}
           <div 
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
             style={{ 
@@ -47,7 +44,6 @@ const WhyUs = () => {
             </div>
           </div>
 
-          {/* Make Content Card */}
           <div 
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
             style={{ 
@@ -76,7 +72,6 @@ const WhyUs = () => {
             </div>
           </div>
 
-          {/* Grow Card */}
           <div 
             className="rounded-lg p-8 text-center shadow-lg border-b-4 transition-all duration-300 hover:shadow-xl"
             style={{ 

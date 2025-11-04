@@ -51,7 +51,6 @@ const Testimonial = () => {
   return (
     <section id="community" className="relative py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Header */}
         <div className="text-center pb-12 md:pb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-4 text-[var(--secondary-300)] dark:text-primary">
             What Our Community Says
@@ -61,7 +60,6 @@ const Testimonial = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <div
@@ -72,7 +70,6 @@ const Testimonial = () => {
                 borderColor: 'var(--gray-300)'
               }}
             >
-              {/* User Info */}
               <div className="flex items-center gap-4 mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden">
                   <Image 
@@ -93,12 +90,10 @@ const Testimonial = () => {
                 </div>
               </div>
 
-              {/* Review Text */}
               <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--gray-600)' }}>
                 {testimonial.text}
               </p>
 
-              {/* Rating Stars */}
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <svg

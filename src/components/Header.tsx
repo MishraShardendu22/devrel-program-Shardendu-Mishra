@@ -6,16 +6,6 @@ import Image from "next/image"
 const Header = () => {
   return (
     <section id="home" className="relative w-full min-h-[85vh] flex items-center overflow-visible pt-20">
-<div className="absolute -left-16 md:-left-20 lg:-left-24 top-1/2 -translate-y-1/2 w-90 h-80 md:w-md md:h-112 lg:w-xl lg:h-128">
-  <Image
-    src="/Theme/bunny.png"
-    alt="Keploy Bunny"
-    width={600}
-    height={800}
-    className="object-contain opacity-60 dark:opacity-40"
-    priority
-  />
-</div>
 
 
       <div className="absolute right-20 md:right-32 lg:right-40 top-1/2 -translate-y-1/2 w-80 h-80 md:w-112 md:h-112 lg:w-128 lg:h-128 hidden md:block">

@@ -82,9 +82,6 @@ export const metadata: Metadata = {
     apple: "/keploy-logo.png"
   },
   manifest: "/site.webmanifest",
-  verification: {
-    google: "your-google-verification-code", // Replace with actual code
-  }
 };
 
 export default function RootLayout({

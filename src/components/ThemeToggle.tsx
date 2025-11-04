@@ -35,7 +35,6 @@ export function ThemeToggle() {
       role="switch"
       aria-checked={isDark}
     >
-      {/* Toggle Circle */}
       <span
         className={cn(
           'inline-flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out',

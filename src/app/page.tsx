@@ -13,7 +13,6 @@ const page = () => {
       <Navbar />
       <Header />
       <Hero />
-      {/* Shared background for WhyUs and Testimonial sections */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image

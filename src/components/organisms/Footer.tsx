@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
+import { Input } from '@/components/ui/input';
 import { SOCIAL_LINKS } from '@/lib/constants';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const [email, setEmail] = useState('');

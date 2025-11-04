@@ -1,34 +1,36 @@
-import Hero from '@/components/Hero';
-import Join from '@/components/Join';
-import WhyUs from '@/components/WhyUs';
-import Header from '@/components/Header';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Testimonial from '@/components/Testimonial';
-import Image from 'next/image';
+import Image from 'next/image'
+import { 
+  Header, 
+  Hero, 
+  MarketingTemplate, 
+  Join, 
+  WhyUs, 
+  Testimonial 
+} from '@/components'
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      <Navbar />
+    <MarketingTemplate>
       <Header />
       <Hero />
+      
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/Theme/community-bunny.png"
-            alt="Background"
+            alt="Community Background"
             fill
             className="object-contain opacity-5"
+            priority={false}
           />
         </div>
         <WhyUs />
         <Testimonial />
       </div>
+      
       <Join />
-      <Footer />
-    </div>
-  );
-};
+    </MarketingTemplate>
+  )
+}
 
-export default page;
+export default Page

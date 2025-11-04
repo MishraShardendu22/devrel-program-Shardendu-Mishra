@@ -1,11 +1,12 @@
 'use client';
 
+
 import Menu from './Menu';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ThemeToggle } from './ThemeToggle';
 import { useState } from 'react';
 import { Github } from 'lucide-react';
+import { ThemeToggle } from '@/components';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

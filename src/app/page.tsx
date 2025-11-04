@@ -17,10 +17,10 @@ const page = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Theme/community-bunny.webp"
+            src="/Theme/community-bunny.png"
             alt="Background"
             fill
-            className="object-cover opacity-5"
+            className="object-contain opacity-5"
           />
         </div>
         <WhyUs />

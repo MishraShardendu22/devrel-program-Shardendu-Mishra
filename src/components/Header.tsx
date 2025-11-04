@@ -58,11 +58,24 @@ const Header = () => {
       <ul className="list-none m-0 fixed top-1/2 right-8 -translate-y-1/2 z-40 hidden lg:block">
         <li className="mb-3">
           <a 
+            href="https://github.com/keploy/keploy" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            aria-label="Star us on GitHub"
+            title="Star us on GitHub"
+          >
+            <i className="fa fa-github text-lg"></i>
+          </a>
+        </li>
+        <li className="mb-3">
+          <a 
             href="https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-600 dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Slack"
+            title="Join us on Slack"
           >
             <i className="fa fa-slack text-lg"></i>
           </a>
@@ -72,8 +85,9 @@ const Header = () => {
             href="https://x.com/Keployio" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-600 dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Twitter"
+            title="Follow us on Twitter/X"
           >
             <i className="fa fa-twitter text-lg"></i>
           </a>
@@ -83,8 +97,9 @@ const Header = () => {
             href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-600 dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="YouTube"
+            title="Subscribe on YouTube"
           >
             <i className="fa fa-youtube-play text-lg"></i>
           </a>
@@ -94,8 +109,9 @@ const Header = () => {
             href="https://www.linkedin.com/company/keploy/posts/?feedView=all" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-600 dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="LinkedIn"
+            title="Follow us on LinkedIn"
           >
             <i className="fa fa-linkedin text-lg"></i>
           </a>
@@ -105,8 +121,9 @@ const Header = () => {
             href="https://keploy.io/blog" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-600 dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
+            className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-900 dark:bg-slate-800 text-white dark:text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
             aria-label="Blog"
+            title="Read our Blog"
           >
             <i className="fa fa-rss text-lg"></i>
           </a>

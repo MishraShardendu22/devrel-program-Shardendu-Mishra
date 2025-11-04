@@ -27,8 +27,8 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className={cn(
-        'relative inline-flex h-9 w-16 items-center rounded-full transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2',
-        isDark ? 'bg-slate-700' : 'bg-orange-500'
+        'relative inline-flex h-9 w-16 items-center rounded-full transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2',
+        isDark ? 'bg-slate-700 focus:ring-slate-500' : 'bg-[#FF914D] focus:ring-[#FF914D]'
       )}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
@@ -45,7 +45,7 @@ export function ThemeToggle() {
         {isDark ? (
           <Moon className="h-4 w-4 text-slate-700" aria-hidden="true" />
         ) : (
-          <Sun className="h-4 w-4 text-orange-500" aria-hidden="true" />
+          <Sun className="h-4 w-4 text-[#FF914D]" aria-hidden="true" />
         )}
       </span>
 

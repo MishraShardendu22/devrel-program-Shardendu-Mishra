@@ -151,6 +151,11 @@ html {
 
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background-color: #FFF5ED; /* Light orangish background for light mode */
+}
+
+.dark body {
+  background-color: var(--background);
 }
 
 /* Font utility classes */

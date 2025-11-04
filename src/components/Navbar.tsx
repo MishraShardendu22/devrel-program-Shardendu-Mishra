@@ -39,7 +39,7 @@ const Navbar = () => {
                 href="https://github.com/keploy/keploy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-secondary dark:bg-secondary text-white font-medium rounded-lg border border-secondary shadow-md transition-all duration-300 hover:bg-secondary/90 hover:shadow-lg"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary dark:bg-secondary text-white font-medium rounded-lg border border-primary dark:border-secondary shadow-md transition-all duration-300 hover:bg-primary/90 dark:hover:bg-secondary/90 hover:shadow-lg"
               >
                 <Github className="w-4 h-4" />
                 <span>Star us on GitHub</span>
@@ -56,7 +56,6 @@ const Navbar = () => {
               </button>
             </nav>
 
-            {/* Mobile Menu Button */}
             <div className="flex md:hidden items-center gap-3">
               <ThemeToggle />
               <button

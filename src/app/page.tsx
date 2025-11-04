@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Testimonial from '@/components/Testimonial'
+import Image from 'next/image'
 
 const page = () => {
   return (
@@ -12,8 +13,19 @@ const page = () => {
       <Navbar />
       <Header />
       <Hero />
-      <WhyUs />
-      <Testimonial />
+      {/* Shared background for WhyUs and Testimonial sections */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/Theme/community-bunny.webp"
+            alt="Background"
+            fill
+            className="object-cover opacity-5"
+          />
+        </div>
+        <WhyUs />
+        <Testimonial />
+      </div>
       <Join />
       <Footer />
     </div>

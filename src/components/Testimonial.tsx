@@ -49,21 +49,11 @@ const Testimonial = () => {
   ]
 
   return (
-    <section id="community" className="relative py-20 md:py-24 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/Theme/community-bunny.webp"
-          alt="Background"
-          fill
-          className="object-cover opacity-5"
-        />
-      </div>
-      
+    <section id="community" className="relative py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="text-center pb-12 md:pb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-4" style={{ color: 'var(--secondary-300)' }}>
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-4 text-[var(--secondary-300)] dark:text-primary">
             What Our Community Says
           </h2>
           <p className="text-lg md:text-xl" style={{ color: 'var(--gray-600)' }}>

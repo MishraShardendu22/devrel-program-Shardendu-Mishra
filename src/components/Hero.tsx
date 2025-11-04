@@ -85,7 +85,7 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center pb-12 md:pb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tighter mb-6" style={{ color: 'var(--secondary-300)' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tighter mb-6 text-[var(--secondary-300)] dark:text-primary">
             Join the <span style={{ color: 'var(--primary-300)' }}>Keploy</span> DevRel Program
           </h1>
           <p className="text-lg md:text-xl mb-8" style={{ color: 'var(--gray-600)' }}>
@@ -131,7 +131,7 @@ const Hero = () => {
 
         {/* Stats Section */}
         <div className="pt-12 md:pt-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: 'var(--secondary-300)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-[var(--secondary-300)] dark:text-primary">
             DevRel Program in Numbers
           </h2>
           

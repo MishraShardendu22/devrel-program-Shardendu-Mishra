@@ -7,7 +7,7 @@ import { SOCIAL_LINKS } from "@/lib/constants"
 const Join = () => {
   return (
     <section id="join" className="relative py-20 md:py-24" style={{ background: 'linear-gradient(135deg, var(--primary-300) 0%, var(--primary-400) 100%)' }}>
-      <div className="absolute inset-0 w-full h-full opacity-10 bg-[url('/contact-bg.jpg')] bg-center bg-cover"></div>
+      <div className="absolute inset-0 w-full h-full opacity-10 bg-[url('/contact-bg.webp')] bg-center bg-cover"></div>
       <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}></div>
       
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -25,7 +25,7 @@ const Join = () => {
               </h3>
               <div className="mb-6">
                 <Image 
-                  src="/slack.png" 
+                  src="/slack.webp" 
                   alt="Slack Community" 
                   width={600} 
                   height={400}

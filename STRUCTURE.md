@@ -39,8 +39,8 @@ devrel-program/
 │           └── micons/          # Custom icon font
 │
 ├── public/                      # Static assets (served as-is)
-│   ├── cohort3.png             # Images
-│   ├── keploy-logo.png
+│   ├── cohort3.webp             # Images
+│   ├── keploy-logo.webp
 │   ├── robots.txt              # SEO robots file
 │   ├── site.webmanifest        # PWA manifest
 │   └── testimonials/           # Testimonial images

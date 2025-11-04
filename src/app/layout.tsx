@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/cohort3.png',
+        url: '/cohort3.webp',
         width: 1200,
         height: 630,
         alt: 'Keploy Developer Relations Program',
@@ -76,11 +76,11 @@ export const metadata: Metadata = {
     title: 'Keploy Developer Relations Program | Join DevRel Community',
     description:
       'Get into the world of DevRels and experience of being one for a month. Learn API testing, create content, and grow your community skills.',
-    images: ['/cohort3.png'],
+    images: ['/cohort3.webp'],
   },
   icons: {
-    icon: '/keploy-logo.png',
-    apple: '/keploy-logo.png',
+    icon: '/keploy-logo.webp',
+    apple: '/keploy-logo.webp',
   },
   manifest: '/site.webmanifest',
 };
@@ -101,7 +101,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
-        <link rel="icon" href="/keploy-logo.png" type="image/png" />
+        <link rel="icon" href="/keploy-logo.webp" type="image/png" />
       </head>
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider

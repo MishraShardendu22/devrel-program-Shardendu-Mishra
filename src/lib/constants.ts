@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   description:
     'Join the Keploy Developer Relations Program and grow your skills in community building, content creation, and developer advocacy.',
   url: 'https://devrel.keploy.io',
-  ogImage: 'https://devrel.keploy.io/og-image.png',
+  ogImage: 'https://devrel.keploy.io/og-image.webp',
   links: {
     slack: 'https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg',
     github: 'https://github.com/keploy/devrel-program',

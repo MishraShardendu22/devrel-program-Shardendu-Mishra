@@ -6,7 +6,7 @@ export default function StructuredData() {
     '@type': 'Organization',
     name: 'Keploy Inc.',
     url: 'https://keploy.io',
-    logo: 'https://devrel.keploy.io/keploy-logo.png',
+    logo: 'https://devrel.keploy.io/keploy-logo.webp',
     description:
       'Keploy is an open-source API testing platform that creates test cases and data mocks from API calls.',
     sameAs: [

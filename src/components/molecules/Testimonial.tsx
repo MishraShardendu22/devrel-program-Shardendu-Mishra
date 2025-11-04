@@ -8,42 +8,42 @@ const Testimonial = () => {
       id: 1,
       name: "Sanskriti Harmukh",
       role: "GitHub Campus Expert",
-      image: "/testimonials/sanskriti.jpg",
+      image: "/testimonials/sanskriti.webp",
       text: "If you are someone looking to step into DevRel and eager to learn its goals in an open source organization, Keploy's DevRel Cohort is the perfect space to boost your learning."
     },
     {
       id: 2,
       name: "Animesh Pathak",
       role: "Gold MLSA",
-      image: "/testimonials/animesh.jpg",
+      image: "/testimonials/animesh.webp",
       text: "DevRel Cohort 1.0 was an incredible experience. I improved my skills significantly. The virtual atmosphere is uplifting and I'm enjoying working with such an impressive team!"
     },
     {
       id: 3,
       name: "Jyotirmoy Roy",
       role: "IRLamigo",
-      image: "/testimonials/roy.jpg",
+      image: "/testimonials/roy.webp",
       text: "Participating in Keploy's DevRel Cohort enriched my knowledge about the DevRel role in open-source. The program helped me effectively communicate with stakeholders."
     },
     {
       id: 4,
       name: "Diganta Kr Banik",
       role: "Web Developer",
-      image: "/testimonials/diganta.jpg",
+      image: "/testimonials/diganta.webp",
       text: "DevRel was new to me. I had a great experience during the cohort and learned a lot during the contribution period. A really great opportunity to experience DevRel."
     },
     {
       id: 5,
       name: "Shashwat Gupta",
       role: "Backend Developer",
-      image: "/testimonials/shashwat.jpg",
+      image: "/testimonials/shashwat.webp",
       text: "Keploy's DevRel Cohort has been a game-changer. I learned effective communication and the key role DevRel plays in open-source. Expert mentorship enriched the journey."
     },
     {
       id: 6,
       name: "Arindam Majumder",
       role: "DevRel @getpieces",
-      image: "/testimonials/barkatul.jpg",
+      image: "/testimonials/barkatul.webp",
       text: "A great learning experience exploring many aspects of DevRel. This program is an excellent opportunity to understand the roles and responsibilities."
     }
   ]

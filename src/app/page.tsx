@@ -17,7 +17,7 @@ const Page = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Theme/community-bunny.png"
+            src="/Theme/community-bunny.webp"
             alt="Community Background"
             fill
             className="object-contain opacity-5"

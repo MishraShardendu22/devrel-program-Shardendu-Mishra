@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className="shrink-0">
               <Link href="/">
                 <Image
-                  src="/keploy-logo.png"
+                  src="/keploy-logo.webp"
                   alt="Keploy Logo"
                   width={120}
                   height={40}

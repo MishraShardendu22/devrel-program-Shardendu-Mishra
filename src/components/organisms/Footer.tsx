@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { SOCIAL_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
+import { Slack, Twitter, Youtube, Linkedin, Rss } from 'lucide-react';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -72,7 +73,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-slack text-lg link-icon"></i>
+                  <Slack className="w-5 h-5" />
                 </a>
               </li>
               <li>
@@ -82,7 +83,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-twitter text-lg link-icon"></i>
+                  <Twitter className="w-5 h-5" />
                 </a>
               </li>
               <li>
@@ -92,7 +93,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-youtube-play text-lg link-icon"></i>
+                  <Youtube className="w-5 h-5" />
                 </a>
               </li>
               <li>
@@ -102,7 +103,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-linkedin text-lg link-icon"></i>
+                  <Linkedin className="w-5 h-5" />
                 </a>
               </li>
               <li>
@@ -112,7 +113,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-rss text-lg link-icon"></i>
+                  <Rss className="w-5 h-5" />
                 </a>
               </li>
             </ul>

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { SOCIAL_LINKS } from "@/lib/constants"
+import { Slack, Twitter, Youtube, Linkedin, Rss } from "lucide-react"
 
 const Join = () => {
   return (
@@ -63,27 +64,27 @@ const Join = () => {
               <ul className="list-none m-0 flex gap-3">
                 <li>
                   <Link href={SOCIAL_LINKS.slack} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 text-white rounded-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <i className="fa fa-slack text-xl link-icon"></i>
+                    <Slack className="w-5 h-5" />
                   </Link>
                 </li>
                 <li>
                   <Link href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 text-white rounded-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <i className="fa fa-twitter text-xl link-icon"></i>
+                    <Twitter className="w-5 h-5" />
                   </Link>
                 </li>
                 <li>
                   <Link href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 text-white rounded-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <i className="fa fa-youtube text-xl link-icon"></i>
+                    <Youtube className="w-5 h-5" />
                   </Link>
                 </li>
                 <li>
                   <Link href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 text-white rounded-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <i className="fa fa-linkedin text-xl link-icon"></i>
+                    <Linkedin className="w-5 h-5" />
                   </Link>
                 </li>
                 <li>
                   <Link href={SOCIAL_LINKS.blog} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 text-white rounded-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <i className="fa fa-rss text-xl link-icon"></i>
+                    <Rss className="w-5 h-5" />
                   </Link>
                 </li>
               </ul>

@@ -3,6 +3,7 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { Switch } from '@/components/ui/switch';
+import { Slack, Twitter, Youtube, Linkedin, Rss } from 'lucide-react';
 
 interface MenuProps {
   isOpen: boolean;
@@ -141,7 +142,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
                 aria-label="Slack"
               >
-                <i className="link-icon fa fa-slack text-lg"></i>
+                <Slack className="w-5 h-5" />
               </a>
               <a
                 href="https://x.com/Keployio"
@@ -150,7 +151,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
                 aria-label="Twitter"
               >
-                <i className="link-icon fa fa-twitter text-lg"></i>
+                <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UC6OTg7F4o0WkmNtSoob34lg"
@@ -159,7 +160,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
                 aria-label="YouTube"
               >
-                <i className="link-icon fa fa-youtube-play text-lg"></i>
+                <Youtube className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/keploy/posts/?feedView=all"
@@ -168,7 +169,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
                 aria-label="LinkedIn"
               >
-                <i className="link-icon fa fa-linkedin text-lg"></i>
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://keploy.io/blog"
@@ -177,7 +178,7 @@ const Menu = ({ isOpen, onClose }: MenuProps) => {
                 className="flex items-center justify-center w-11 h-11 bg-background text-foreground hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105 border border-border"
                 aria-label="Blog"
               >
-                <i className="link-icon fa fa-rss text-lg"></i>
+                <Rss className="w-5 h-5" />
               </a>
             </div>
           </div>

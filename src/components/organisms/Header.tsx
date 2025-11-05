@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { Github, Slack, Twitter, Youtube, Linkedin, Rss } from "lucide-react"
 
 const Header = () => {
   return (
@@ -55,7 +56,7 @@ const Header = () => {
             aria-label="Star us on GitHub"
             title="Star us on GitHub"
           >
-            <i className=" fa fa-github text-lg link-icon"></i>
+            <Github className="w-5 h-5" />
           </a>
         </li>
         <li className="mb-3">
@@ -67,7 +68,7 @@ const Header = () => {
             aria-label="Slack"
             title="Join us on Slack"
           >
-            <i className=" fa fa-slack text-lg link-icon"></i>
+            <Slack className="w-5 h-5" />
           </a>
         </li>
         <li className="mb-3">
@@ -79,7 +80,7 @@ const Header = () => {
             aria-label="Twitter"
             title="Follow us on Twitter/X"
           >
-            <i className=" fa fa-twitter text-lg link-icon"></i>
+            <Twitter className="w-5 h-5" />
           </a>
         </li>
         <li className="mb-3">
@@ -91,7 +92,7 @@ const Header = () => {
             aria-label="YouTube"
             title="Subscribe on YouTube"
           >
-            <i className=" fa fa-youtube-play text-lg link-icon"></i>
+            <Youtube className="w-5 h-5" />
           </a>
         </li>
         <li className="mb-3">
@@ -103,7 +104,7 @@ const Header = () => {
             aria-label="LinkedIn"
             title="Follow us on LinkedIn"
           >
-            <i className=" fa fa-linkedin text-lg link-icon"></i>
+            <Linkedin className="w-5 h-5" />
           </a>
         </li>
         <li>
@@ -115,7 +116,7 @@ const Header = () => {
             aria-label="Blog"
             title="Read our Blog"
           >
-            <i className=" fa fa-rss text-lg link-icon"></i>
+            <Rss className="w-5 h-5" />
           </a>
         </li>
       </ul>

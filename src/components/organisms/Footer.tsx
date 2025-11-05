@@ -72,7 +72,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-slack text-lg"></i>
+                  <i className="fa fa-slack text-lg link-icon"></i>
                 </a>
               </li>
               <li>
@@ -82,7 +82,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-twitter text-lg"></i>
+                  <i className="fa fa-twitter text-lg link-icon"></i>
                 </a>
               </li>
               <li>
@@ -92,7 +92,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-youtube-play text-lg"></i>
+                  <i className="fa fa-youtube-play text-lg link-icon"></i>
                 </a>
               </li>
               <li>
@@ -102,7 +102,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-linkedin text-lg"></i>
+                  <i className="fa fa-linkedin text-lg link-icon"></i>
                 </a>
               </li>
               <li>
@@ -112,7 +112,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-slate-700 bg-slate-800 text-white/70 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-110"
                 >
-                  <i className="fa fa-rss text-lg"></i>
+                  <i className="fa fa-rss text-lg link-icon"></i>
                 </a>
               </li>
             </ul>

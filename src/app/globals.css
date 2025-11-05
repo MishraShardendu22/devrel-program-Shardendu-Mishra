@@ -213,6 +213,14 @@ body {
   color: #ffffff;
 }
 
+.link-icon {
+  color: grey;
+  transition: color 0.18s ease-in-out;
+}
+.dark .link-icon {
+  color: var(--color-white);
+}
+
 /* Ensure smooth scrolling for anchor links */
 a[href^='#'] {
   scroll-behavior: smooth;

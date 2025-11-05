@@ -55,7 +55,7 @@ const Header = () => {
             aria-label="Star us on GitHub"
             title="Star us on GitHub"
           >
-            <i className="fa fa-github text-lg"></i>
+            <i className=" fa fa-github text-lg link-icon"></i>
           </a>
         </li>
         <li className="mb-3">
@@ -67,7 +67,7 @@ const Header = () => {
             aria-label="Slack"
             title="Join us on Slack"
           >
-            <i className="fa fa-slack text-lg"></i>
+            <i className=" fa fa-slack text-lg link-icon"></i>
           </a>
         </li>
         <li className="mb-3">
@@ -79,7 +79,7 @@ const Header = () => {
             aria-label="Twitter"
             title="Follow us on Twitter/X"
           >
-            <i className="fa fa-twitter text-lg"></i>
+            <i className=" fa fa-twitter text-lg link-icon"></i>
           </a>
         </li>
         <li className="mb-3">
@@ -91,7 +91,7 @@ const Header = () => {
             aria-label="YouTube"
             title="Subscribe on YouTube"
           >
-            <i className="fa fa-youtube-play text-lg"></i>
+            <i className=" fa fa-youtube-play text-lg link-icon"></i>
           </a>
         </li>
         <li className="mb-3">
@@ -103,7 +103,7 @@ const Header = () => {
             aria-label="LinkedIn"
             title="Follow us on LinkedIn"
           >
-            <i className="fa fa-linkedin text-lg"></i>
+            <i className=" fa fa-linkedin text-lg link-icon"></i>
           </a>
         </li>
         <li>
@@ -115,7 +115,7 @@ const Header = () => {
             aria-label="Blog"
             title="Read our Blog"
           >
-            <i className="fa fa-rss text-lg"></i>
+            <i className=" fa fa-rss text-lg link-icon"></i>
           </a>
         </li>
       </ul>

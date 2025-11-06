@@ -1,0 +1,4 @@
+pnpm install
+pnpm type-check
+pnpm format
+pnpm build

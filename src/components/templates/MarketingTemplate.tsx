@@ -1,9 +1,9 @@
-import React from 'react'
-import { Navbar, Footer } from '@/components'
+import React from 'react';
+import { Navbar, Footer } from '@/components';
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export const MarketingTemplate: React.FC<Props> = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ export const MarketingTemplate: React.FC<Props> = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MarketingTemplate
+export default MarketingTemplate;

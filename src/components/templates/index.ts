@@ -1,1 +1,1 @@
-export { default as MarketingTemplate } from './MarketingTemplate'
+export { default as MarketingTemplate } from './MarketingTemplate';

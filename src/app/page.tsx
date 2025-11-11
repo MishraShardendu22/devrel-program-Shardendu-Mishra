@@ -1,19 +1,12 @@
-import Image from 'next/image'
-import { 
-  Header, 
-  Hero, 
-  MarketingTemplate, 
-  Join, 
-  WhyUs, 
-  Testimonial 
-} from '@/components'
+import Image from 'next/image';
+import { Header, Hero, MarketingTemplate, Join, WhyUs, Testimonial } from '@/components';
 
 const Page = () => {
   return (
     <MarketingTemplate>
       <Header />
       <Hero />
-      
+
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -27,10 +20,10 @@ const Page = () => {
         <WhyUs />
         <Testimonial />
       </div>
-      
+
       <Join />
     </MarketingTemplate>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
